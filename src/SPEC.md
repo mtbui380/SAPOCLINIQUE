@@ -45,4 +45,4 @@ export default {
 
 ## Images disponibles (docs/assets/img)
 
-`tp-sutures`, `tp-paro-inserts`, `tp-chirurgie-praticien`, `tp-paro-detail`, `equipe`, `salle-tp`, `wix-paro`, `wix-chir`, `wix-chir2`, `wix-chir3`, `wix-paro1` (toutes en 800/1600, WebP+JPEG) ; portraits : `portrait-blois`, `portrait-rzeznik` (taille unique, `widths: [480]`).
+En 800/1600/2400 (WebP+JPEG, défaut du helper `img()`) : `tp-chirurgie-praticien`, `tp-paro-detail`, `equipe`, `salle-tp`, `wix-paro`, `wix-chir`, `wix-chir2`, `wix-chir3`, `wix-paro1`. En 800/1600 seulement (source 1772px — passer `widths: [800, 1600]`) : `tp-sutures`. Portraits : `portrait-blois`, `portrait-rzeznik` (taille unique, `widths: [480]`). Qualité : WebP 82 / JPEG 84 (mozjpeg).

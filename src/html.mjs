@@ -13,12 +13,13 @@ export function esc(s) {
  * Image responsive : <picture> WebP + repli JPEG.
  * name  : base du fichier dans /assets/img (ex. "tp-sutures")
  * alt   : texte alternatif (obligatoire ; "" si décorative)
- * widths: tailles générées (défaut [800, 1600])
+ * widths: tailles générées (défaut [800, 1600, 2400] — passer un sous-ensemble
+ *         pour les sources plus petites, cf. src/SPEC.md)
  * sizes : attribut sizes (défaut "100vw")
  * cls   : classes CSS de l'<img> (ex. "ph ar-32")
  * eager : true → loading eager + fetchpriority high (au-dessus de la ligne de flottaison)
  */
-export function img({ name, alt, widths = [800, 1600], sizes = '100vw', cls = '', eager = false }) {
+export function img({ name, alt, widths = [800, 1600, 2400], sizes = '100vw', cls = '', eager = false }) {
   const src = (ext, w) => widths.length > 1 ? `/assets/img/${name}-${w}.${ext}` : `/assets/img/${name}.${ext}`;
   const srcset = (ext) => widths.map(w => `${src(ext, w)} ${w}w`).join(', ');
   const biggest = widths[widths.length - 1];

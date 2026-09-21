@@ -88,7 +88,7 @@ function dissectionSection() {
       <a class="link-u" href="/cursus/chirurgie/" style="align-self:flex-start">Cursus Chirurgie, module 2/2</a>
     </div>
     <div class="gc-5-end">
-      ${img({ name: 'tp-sutures', alt: 'Travaux pratiques de sutures sur pièce anatomique, cursus Chirurgie orale SAPO Clinique', cls: 'ph ar-32 ph--bleed-r', sizes: '(max-width: 720px) 100vw, 60vw' })}
+      ${img({ name: 'tp-sutures', alt: 'Travaux pratiques de sutures sur pièce anatomique, cursus Chirurgie orale SAPO Clinique', widths: [800, 1600], cls: 'ph ar-32 ph--bleed-r', sizes: '(max-width: 720px) 100vw, 60vw' })}
     </div>
   </div>
 </section>`;
@@ -98,7 +98,7 @@ function paroSection() {
   return `<section class="section--md" aria-labelledby="h-paro">
   <div class="container grid bleed-left" style="align-items:end">
     <div class="gc-1-8">
-      ${img({ name: 'tp-paro-inserts', alt: 'Travaux pratiques de parodontologie non chirurgicale, micro-inserts ultrasoniques sur modèle', cls: 'ph ar-32 ph--bleed-l', sizes: '(max-width: 720px) 100vw, 60vw' })}
+      ${img({ name: 'wix-paro', alt: 'Travaux pratiques de parodontologie non chirurgicale sur modèle pédagogique, SAPO Clinique', cls: 'ph ar-32 ph--bleed-l', sizes: '(max-width: 720px) 100vw, 60vw' })}
     </div>
     <div class="gc-9-4 stack gap-5" style="padding-bottom:48px">
       <h2 id="h-paro" class="h2-xl">Parodontologie non chirurgicale</h2>
@@ -148,7 +148,7 @@ function statsSection() {
       ${img({ name: 'tp-chirurgie-praticien', alt: 'Praticien en travaux pratiques de chirurgie orale, cursus SAPO Clinique', cls: 'ph ar-45', sizes: '(max-width: 720px) 100vw, 45vw' })}
     </figure>
     <figure class="gc-7-6">
-      ${img({ name: 'wix-paro', alt: 'Travaux pratiques de parodontologie sur modèle pédagogique, SAPO Clinique', cls: 'ph ar-45', sizes: '(max-width: 720px) 100vw, 45vw' })}
+      ${img({ name: 'salle-tp', alt: 'Salle de travaux pratiques SAPO Clinique, praticiens en formation', cls: 'ph ar-45', sizes: '(max-width: 720px) 100vw, 45vw' })}
     </figure>
   </div>
 </section>`;
