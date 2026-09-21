@@ -36,7 +36,11 @@
   var video = document.querySelector('.hero__video');
   var toggle = document.querySelector('.video-toggle');
   if (video) {
-    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Pas d'autoplay si l'utilisateur préfère réduire les animations, ni sur
+    // mobile (économie de données — le poster s'affiche, la lecture reste
+    // possible via le bouton).
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+      window.matchMedia('(max-width: 720px)').matches;
     var setState = function (playing) {
       if (!toggle) return;
       toggle.dataset.state = playing ? 'playing' : 'paused';

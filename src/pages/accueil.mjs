@@ -16,8 +16,12 @@ const cursusMeta = {
 
 function heroSection() {
   return `<section class="hero" aria-label="Présentation">
-  <!-- Pas d'attribut autoplay : site.js lance la lecture sauf prefers-reduced-motion ; sans JS, le poster s'affiche (WCAG 2.2.2). -->
-  <video class="hero__video" src="/assets/video/hero.mp4" poster="/assets/img/hero-poster.jpg" muted loop playsinline aria-hidden="true"></video>
+  <!-- Pas d'attribut autoplay : site.js lance la lecture sauf prefers-reduced-motion et sauf mobile ; sans JS, le poster s'affiche (WCAG 2.2.2).
+       Deux formats : WebM/VP9 (1,5 Mo, navigateurs modernes) puis H.264 (3 Mo, repli Safari/iOS). -->
+  <video class="hero__video" poster="/assets/img/hero-poster.jpg" preload="metadata" muted loop playsinline aria-hidden="true">
+    <source src="/assets/video/hero.webm" type="video/webm">
+    <source src="/assets/video/hero.mp4" type="video/mp4">
+  </video>
   <div class="hero__shade hero__shade--v"></div>
   <div class="hero__shade hero__shade--r"></div>
   <button class="video-toggle" type="button" data-state="playing" aria-label="Mettre la vidéo en pause" hidden>
