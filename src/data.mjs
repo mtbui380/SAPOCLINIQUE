@@ -10,7 +10,7 @@ export const site = {
   baseUrl: 'https://www.sapoclinique.com',
   email: 'contact@sapoclinique.com',
   instagram: 'https://www.instagram.com/',           // TODO : URL du compte Instagram
-  descriptionCourte: 'Organisme de formation en chirurgie orale et parodontologie, depuis 2002.',
+  descriptionCourte: 'Organisme de formation en odontologie chirurgicale et parodontologie, depuis 2002.',
   qualiopi: { certificat: 'ICPF B05608', nda: '52490397949' },
   referentHandicap: 'Philippe Blois',
   fondation: '2002',
@@ -27,9 +27,9 @@ export const cursus = {
     key: 'chirurgie', slug: 'chirurgie',
     title: 'Cursus Chirurgie', tag: 'Chirurgical', format: '2 modules de 3 jours',
     public: 'Chirurgiens-dentistes', price: 'Sur demande',
-    seoDescription: "Formation en chirurgie orale : analgésie, CBCT, sutures, hémostase, et une journée de dissection sur corps humain à l'École de Chirurgie de Paris.",
+    seoDescription: "Formation en odontologie chirurgicale : analgésie, CBCT, sutures, hémostase, et une journée de dissection sur corps humain à l'École de Chirurgie de Paris.",
     place: "Faculté de chirurgie dentaire, Université Paris Cité (Descartes), Paris · journée de dissection à l'École de Chirurgie de l'AP-HP",
-    intro: "Quatre thèmes en travaux pratiques : l'analgésie, la chirurgie orale (incisions, sutures), la gestion des hémorragies et l'imagerie. Une approche exclusivement clinique de l'anatomie, dans la continuité du Pr Jean-François Gaudy, avec une journée de dissection sur corps humain à l'École de Chirurgie de l'AP-HP.",
+    intro: "Quatre thèmes en travaux pratiques : l'analgésie, l'odontologie chirurgicale (incisions, sutures), la gestion des hémorragies et l'imagerie. Une approche exclusivement clinique de l'anatomie, dans la continuité du Pr Jean-François Gaudy, avec une journée de dissection sur corps humain à l'École de Chirurgie de l'AP-HP.",
     sessionsNote: 'Une promotion par an, en deux modules de trois jours qui se suivent. Le module 2/2 comprend la journée de dissection.',
     sessions: [{ name: 'Promotion 2027', parts: [{ label: 'Module 1/2', dates: '2–4 juin 2027' }, { label: 'Module 2/2', dates: 'septembre 2027 (à confirmer)' }] }],
     goals: [
@@ -51,7 +51,7 @@ export const cursus = {
         ],
       },
       {
-        num: 'M2', label: 'Module 2/2 · 3 jours · dissection', title: 'Chirurgie orale et hémostase',
+        num: 'M2', label: 'Module 2/2 · 3 jours · dissection', title: 'Odontologie chirurgicale et hémostase',
         body: "Rapports anatomiques des sites opératoires pour opérer en sécurité, de l'avulsion simple à la dent de sagesse ou la canine incluse, la résection apicale, la ROG et le sinus lift. Initiation à la piézochirurgie. Hémostase et coagulation : bilans, anomalies, moyens thérapeutiques, urgences hémorragiques.",
         days: [
           'Cours : anatomie vasculaire, hémostase locale et générale, dermatologie buccale, avulsion de la dent de sagesse, résections apicales.',
@@ -61,7 +61,7 @@ export const cursus = {
       },
     ],
     faq: [
-      { q: 'Quels sont les prérequis ?', a: "Être chirurgien-dentiste diplômé. Aucun niveau préalable en chirurgie orale n'est exigé : le cursus s'adresse autant à l'omnipraticien qui veut commencer à opérer qu'au praticien expérimenté." },
+      { q: 'Quels sont les prérequis ?', a: "Être chirurgien-dentiste diplômé. Aucun niveau préalable en odontologie chirurgicale n'est exigé : le cursus s'adresse autant à l'omnipraticien qui veut commencer à opérer qu'au praticien expérimenté." },
       { q: 'La journée de dissection est-elle obligatoire ?', a: "Elle fait partie du module 2/2 et se déroule à l'École de Chirurgie de l'AP-HP à Paris. Elle est réservée aux inscrits au cursus complet." },
       { q: 'Que dois-je apporter ?', a: 'Un ordinateur portable PC pour la séance CBCT (Mac et iPad incompatibles avec le logiciel utilisé). Le matériel de TP est fourni.' },
       { q: 'La formation est-elle prise en charge ?', a: 'SAPO Clinique est certifié Qualiopi : la formation est éligible au FIF-PL et aux prises en charge OPCO ou employeur. Une convention est établie à l’inscription.' },
@@ -194,7 +194,7 @@ export const cursus = {
     key: 'reunion', slug: null,
     title: 'Conférence à la Réunion', tag: 'Chirurgical', format: '3 jours · 22, 23 et 24 octobre 2026',
     public: 'Chirurgiens-dentistes', price: 'Sur demande', place: 'La Réunion (lieu à préciser)',
-    intro: 'Osez et progressez en chirurgie orale. Conférence et démonstrations à la Réunion.',
+    intro: 'Osez et progressez en odontologie chirurgicale. Conférence et démonstrations à la Réunion.',
     sessionsNote: 'Conférence sur trois jours.',
     sessions: [{ name: '2026', parts: [{ label: '3 jours', dates: '22–24 octobre 2026' }] }],
     goals: [], modules: [], faq: null,
@@ -208,7 +208,7 @@ export const cursus = {
 export const sessions = [
   { month: 'Mai 26', key: 'masterclass', type: 'paro', title: 'Masterclass Parodontologie', promo: 'Promotion 2026 · 3 jours', dates: '20–22 mai 2026', past: true },
   { month: 'Juin 26', key: 'chirurgie', type: 'chir', title: 'Cursus Chirurgie, avec dissection', promo: 'Promotion 2026 · 2 × 3 jours', dates: '10–12 juin · 16–18 sept 2026', past: true },
-  { month: 'Oct 26', key: 'reunion', type: 'event', title: 'Conférence à la Réunion', promo: 'Chirurgie orale', dates: '22–24 octobre', contact: true },
+  { month: 'Oct 26', key: 'reunion', type: 'event', title: 'Conférence à la Réunion', promo: 'Odontologie chirurgicale', dates: '22–24 octobre', contact: true },
   { month: 'Janv 27', key: 'parodontologie', formKey: 'paro-m1', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 1/2', promo: 'Promotion 2027-I · non chirurgical · 3 jours', dates: '13–15 janvier' },
   { month: 'Janv 27', key: 'assistante', formKey: 'assistante', sess: 'Session janvier 2027', type: 'assist', title: 'Cursus Assistante en Parodontologie', promo: 'Promotion 2027 · 2 jours', dates: '13–14 janvier' },
   { month: 'Mars 27', key: 'parodontologie', formKey: 'paro-m2', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 2/2', promo: 'Promotion 2027-I · chirurgical · 3 jours', dates: '24–26 mars' },
@@ -256,7 +256,7 @@ export const stats = [
 ];
 
 export const equipe = [
-  { nom: 'Dr Philippe Blois', role: 'Co-directeur · Chirurgie orale', img: 'portrait-blois', pos: '50% 15%' },
+  { nom: 'Dr Philippe Blois', role: 'Co-directeur · Odontologie chirurgicale', img: 'portrait-blois', pos: '50% 15%' },
   { nom: 'Dr Matthias Rzeznik', role: 'Co-directeur · Parodontologie', img: 'portrait-rzeznik', pos: '50% 20%' },
   // TODO : compléter l'équipe (formateurs, référent handicap) — portraits + noms.
 ];
@@ -316,16 +316,16 @@ export function buildFormData() {
 // ---------------------------------------------------------------------------
 export const seo = {
   accueil: {
-    title: 'SAPO Clinique · Formation en chirurgie orale et parodontologie',
-    description: 'Organisme certifié Qualiopi depuis 2002 : cursus Chirurgie orale avec dissection, Parodontologie, Masterclass et formation assistante dentaire, à Paris.',
+    title: 'SAPO Clinique · Odontologie chirurgicale et parodontologie',
+    description: 'Organisme certifié Qualiopi depuis 2002 : cursus Odontologie chirurgicale avec dissection, Parodontologie, Masterclass et formation assistante dentaire, à Paris.',
   },
   cursus: {
-    title: 'Cursus de chirurgie orale et parodontologie · SAPO Clinique',
+    title: "Cursus d'odontologie chirurgicale et parodontologie · SAPO Clinique",
     description: 'Quatre formations pratiques pour chirurgiens-dentistes et assistantes : programme détaillé, objectifs, déroulé jour par jour.',
   },
   calendrier: {
     title: 'Calendrier des sessions · SAPO Clinique',
-    description: 'Dates des cursus Chirurgie orale, Parodontologie (modules 1/2 et 2/2), Masterclass et Assistante. Inscriptions ouvertes.',
+    description: 'Dates des cursus Odontologie chirurgicale, Parodontologie (modules 1/2 et 2/2), Masterclass et Assistante. Inscriptions ouvertes.',
   },
   qui: {
     title: 'Qui sommes-nous · SAPO Clinique, formation continue depuis 2002',

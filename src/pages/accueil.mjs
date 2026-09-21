@@ -4,7 +4,7 @@ import { site, cursusList, cursus, upcoming, upcomingYearsLabel, heroSession, st
 const piliers = [
   { t: 'Comprendre', p: "Anatomie clinique, modèles 3D et imagerie. Repères, trajets nerveux et vasculaires : le socle commun à tous les cursus." },
   { t: 'Traiter sans chirurgie', p: 'Parodontologie non chirurgicale : diagnostic, alliance thérapeutique, traitement minimalement invasif, maintenance. Pour praticiens et assistantes.' },
-  { t: 'Opérer', p: "Chirurgie orale et parodontale : incisions, sutures, gestion des hémorragies, chirurgie plastique. Du modèle animal à une journée de dissection sur corps humain." },
+  { t: 'Opérer', p: "Odontologie chirurgicale et parodontale : incisions, sutures, gestion des hémorragies, chirurgie plastique. Du modèle animal à une journée de dissection sur corps humain." },
 ];
 
 const cursusMeta = {
@@ -30,9 +30,9 @@ function heroSection() {
   </button>
   <div class="container grid hero__grid">
     <div class="gc-1-8 stack gap-6">
-      <p class="hero__note">Chirurgie orale et parodontologie depuis 2002</p>
+      <p class="hero__note">Odontologie chirurgicale et parodontologie depuis 2002</p>
       <h1 class="hero-title">Le savoir anatomique au service du savoir-faire clinique.</h1>
-      <p class="lead" style="max-width:560px">Formations pratiques pour chirurgiens-dentistes et assistantes : du traitement parodontal non chirurgical à la chirurgie orale, jusqu'à la dissection sur corps humain.</p>
+      <p class="lead" style="max-width:560px">Formations pratiques pour chirurgiens-dentistes et assistantes : du traitement parodontal non chirurgical à l'odontologie chirurgicale, jusqu'à la dissection sur corps humain.</p>
       <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
         <a class="btn btn--primary" href="/calendrier/">Voir les prochaines sessions</a>
         <a class="link-u" href="/cursus/">Les cursus</a>
@@ -88,7 +88,7 @@ function dissectionSection() {
       <a class="link-u" href="/cursus/chirurgie/" style="align-self:flex-start">Cursus Chirurgie, module 2/2</a>
     </div>
     <div class="gc-5-end">
-      ${img({ name: 'tp-sutures', alt: 'Travaux pratiques de sutures sur pièce anatomique, cursus Chirurgie orale SAPO Clinique', widths: [800, 1600], cls: 'ph ar-32 ph--bleed-r', sizes: '(max-width: 720px) 100vw, 60vw' })}
+      ${img({ name: 'tp-sutures', alt: 'Travaux pratiques de sutures sur pièce anatomique, cursus Odontologie chirurgicale SAPO Clinique', widths: [800, 1600], cls: 'ph ar-32 ph--bleed-r', sizes: '(max-width: 720px) 100vw, 60vw' })}
     </div>
   </div>
 </section>`;
@@ -145,7 +145,7 @@ function statsSection() {
     ${cards}
     </div>
     <figure class="gc-1-6">
-      ${img({ name: 'tp-chirurgie-praticien', alt: 'Praticien en travaux pratiques de chirurgie orale, cursus SAPO Clinique', cls: 'ph ar-45', sizes: '(max-width: 720px) 100vw, 45vw' })}
+      ${img({ name: 'tp-chirurgie-praticien', alt: "Praticien en travaux pratiques d'odontologie chirurgicale, cursus SAPO Clinique", cls: 'ph ar-45', sizes: '(max-width: 720px) 100vw, 45vw' })}
     </figure>
     <figure class="gc-7-6">
       ${img({ name: 'salle-tp', alt: 'Salle de travaux pratiques SAPO Clinique, praticiens en formation', cls: 'ph ar-45', sizes: '(max-width: 720px) 100vw, 45vw' })}

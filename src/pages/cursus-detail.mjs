@@ -3,7 +3,7 @@ import { cursusList, site, orgJsonLd, courseJsonLd, faqJsonLd } from '../data.mj
 
 // Image d'illustration par cursus (base /assets/img).
 const illustrations = {
-  chirurgie: { name: 'wix-chir', alt: 'Travaux pratiques de chirurgie orale sur modèle 3D, SAPO Clinique' },
+  chirurgie: { name: 'wix-chir', alt: "Travaux pratiques d'odontologie chirurgicale sur modèle 3D, SAPO Clinique" },
   parodontologie: { name: 'tp-paro-detail', alt: 'Travaux pratiques du cursus Parodontologie, SAPO Clinique' },
   masterclass: { name: 'wix-paro1', alt: 'Chirurgie plastique parodontale sur mâchoire animale, cursus Parodontologie' },
   assistante: { name: 'wix-paro', alt: 'Travaux pratiques sur modèle pédagogique, formation assistante en parodontologie SAPO Clinique' },

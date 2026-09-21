@@ -53,16 +53,16 @@ function accordion(c, open = false) {
 
 const content = `<section class="container section--top grid" style="row-gap:64px" aria-label="Les cursus">
   <div class="gc-1-7 stack gap-6" style="padding-right:24px">
-    <h1 class="page-title">Chirurgie orale et parodontologie</h1>
-    <p class="lead">Découvrez nos modules dédiés à la chirurgie orale et à la parodontologie, du traitement non chirurgical à la chirurgie plastique parodontale. <br>Des cursus essentiellement pratiques, sur modèles 3D et pièces anatomiques, <br>à appliquer au cabinet.</p>
+    <h1 class="page-title">Odontologie chirurgicale et parodontologie</h1>
+    <p class="lead">Découvrez nos modules dédiés à l'odontologie chirurgicale et à la parodontologie, du traitement non chirurgical à la chirurgie plastique parodontale. <br>Des cursus essentiellement pratiques, sur modèles 3D et pièces anatomiques, <br>à appliquer au cabinet.</p>
     <nav class="jump-chips" aria-label="Accès direct aux cursus">
-      <a href="#chirurgie">Chirurgie orale</a>
+      <a href="#chirurgie">Odontologie chirurgicale</a>
       <a href="#parodontologie">Parodontologie</a>
       <a href="#assistante">Assistante</a>
     </nav>
   </div>
 
-  <h2 class="gc-1-3 h2-lg" style="padding-top:26px">Chirurgie orale</h2>
+  <h2 class="gc-1-3 h2-lg" style="padding-top:26px">Odontologie chirurgicale</h2>
   <div class="gc-4-9 rule-top-strong">
     ${accordion(cursus.chirurgie, true)}
   </div>

@@ -46,7 +46,7 @@ const sessionOptions = def.sessions.map((s, i) =>
   `<option value="${esc(s.value)}"${i === 0 ? ' selected' : ''}>${esc(s.label)}</option>`
 ).join('');
 
-const specialites = ['Chirurgien-dentiste omnipraticien', 'Chirurgie orale', 'Parodontologie', 'Implantologie', 'Assistante dentaire', 'Étudiant / interne', 'Autre']
+const specialites = ['Chirurgien-dentiste omnipraticien', 'Odontologie chirurgicale', 'Parodontologie', 'Implantologie', 'Assistante dentaire', 'Étudiant / interne', 'Autre']
   .map(s => `<option>${esc(s)}</option>`).join('');
 
 const financements = ['Personnel · en 1 fois', 'Personnel · en plusieurs fois', 'Prise en charge FIF-PL', 'Prise en charge OPCO / employeur', 'Je ne sais pas encore']

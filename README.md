@@ -1,7 +1,7 @@
 # Site SAPO Clinique
 
 Site statique de [SAPO Clinique](https://www.sapoclinique.com) — organisme de formation
-en chirurgie orale et parodontologie. Généré sans framework ni dépendance, servi par
+en odontologie chirurgicale et parodontologie. Généré sans framework ni dépendance, servi par
 GitHub Pages depuis le dossier `docs/`.
 
 ## Modifier le site
