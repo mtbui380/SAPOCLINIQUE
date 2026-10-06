@@ -113,6 +113,7 @@ function detailPage(c) {
     title: `${c.title} · ${c.formatCourt || c.format} · SAPO Clinique`,
     description: c.seoDescription || c.intro,
     navKey: 'cursus',
+    noindex: !!c.hidden,
     jsonLd,
     content: [head, programme, sessions, image, faq, infos].filter(Boolean).join('\n\n'),
   };

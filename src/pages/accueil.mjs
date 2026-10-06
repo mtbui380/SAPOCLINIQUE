@@ -1,5 +1,5 @@
 import { esc, img, arrow, inscriptionHref } from '../html.mjs';
-import { site, cursusList, cursus, upcoming, upcomingYearsLabel, heroSession, stats, seo, orgJsonLd, courseJsonLd } from '../data.mjs';
+import { site, cursusVisibles, cursus, upcoming, upcomingYearsLabel, heroSession, stats, seo, orgJsonLd, courseJsonLd } from '../data.mjs';
 
 const piliers = [
   { t: 'Comprendre', p: "Anatomie clinique, modèles 3D et imagerie. Repères, trajets nerveux et vasculaires : le socle commun à tous les cursus." },
@@ -60,7 +60,7 @@ function piliersSection() {
 }
 
 function cursusSection() {
-  const rows = cursusList.map(c => {
+  const rows = cursusVisibles.map(c => {
     const m = cursusMeta[c.key];
     return `<a class="row-acc" href="/cursus/${c.slug}/">
       <span class="h3-item">${esc(c.title)}</span>
@@ -195,7 +195,7 @@ export default {
   title: seo.accueil.title,
   description: seo.accueil.description,
   navKey: null,
-  jsonLd: [orgJsonLd(), ...cursusList.map(c => courseJsonLd(c))],
+  jsonLd: [orgJsonLd(), ...cursusVisibles.map(c => courseJsonLd(c))],
   content: [
     heroSection(),
     piliersSection(),
