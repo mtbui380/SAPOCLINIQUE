@@ -1,5 +1,5 @@
 import { esc, accIcon } from '../html.mjs';
-import { cursusList, cursus, seo, orgJsonLd, courseJsonLd } from '../data.mjs';
+import { cursusVisibles, cursus, seo, orgJsonLd, courseJsonLd } from '../data.mjs';
 
 // Libellés courts des en-têtes d'accordéon (versions maquette, distinctes des champs data).
 const accMeta = {
@@ -70,7 +70,7 @@ const content = `<section class="container section--top grid" style="row-gap:64p
   <h2 class="gc-1-3 h2-lg" style="padding-top:26px">Parodontologie</h2>
   <div class="gc-4-9 rule-top-strong">
     ${accordion(cursus.parodontologie)}
-    ${accordion(cursus.masterclass)}
+    ${cursus.masterclass.hidden ? '' : accordion(cursus.masterclass)}
     ${accordion(cursus.assistante)}
   </div>
 </section>`;
@@ -80,6 +80,6 @@ export default {
   title: seo.cursus.title,
   description: seo.cursus.description,
   navKey: 'cursus',
-  jsonLd: [orgJsonLd(), ...cursusList.map(c => courseJsonLd(c))],
+  jsonLd: [orgJsonLd(), ...cursusVisibles.map(c => courseJsonLd(c))],
   content,
 };

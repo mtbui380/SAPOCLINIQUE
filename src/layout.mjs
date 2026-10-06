@@ -1,5 +1,5 @@
 import { esc } from './html.mjs';
-import { site } from './data.mjs';
+import { site, cursusVisibles } from './data.mjs';
 
 const CSP = [
   "default-src 'none'",
@@ -50,10 +50,7 @@ function footer() {
   <div class="container grid site-footer__grid">
     <div class="gc-1-4"><span class="site-footer__head">${esc(site.legalName)}</span>${esc(site.descriptionCourte)}</div>
     <div class="gc-5-3"><span class="site-footer__head">Formations</span>
-      <a href="/cursus/chirurgie/">Cursus Chirurgie</a>
-      <a href="/cursus/parodontologie/">Cursus Parodontologie</a>
-      <a href="/cursus/masterclass-parodontologie/">Masterclass Parodontologie</a>
-      <a href="/cursus/assistante/">Assistante</a>
+      ${cursusVisibles.map(c => `<a href="/cursus/${c.slug}/">${esc(c.key === 'assistante' ? 'Assistante' : c.title)}</a>`).join('\n      ')}
     </div>
     <div class="gc-8-2"><span class="site-footer__head">Site</span>
       <a href="/calendrier/">Calendrier</a>

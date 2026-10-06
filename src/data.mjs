@@ -121,6 +121,9 @@ export const cursus = {
 
   masterclass: {
     key: 'masterclass', slug: 'masterclass-parodontologie',
+    // Masquée des listings (Cursus, accueil, pied de page, sitemap) tant qu'aucune
+    // session n'est programmée ; la fiche reste accessible par URL (redirection Wix).
+    hidden: true,
     title: 'Masterclass Parodontologie', tag: 'Chirurgical · avancé', format: '1 module de 3 jours',
     public: 'Praticiens expérimentés ou anciens du cursus', price: 'Sur demande',
     seoDescription: 'Trois jours pour maîtriser MINST, greffes de recouvrement des incisives mandibulaires et chirurgie péri-implantaire. Pour praticiens expérimentés.',
@@ -315,11 +318,11 @@ export function buildFormData() {
 export const seo = {
   accueil: {
     title: 'SAPO Clinique · Odontologie chirurgicale et parodontologie',
-    description: 'Organisme certifié Qualiopi depuis 2002 : cursus Odontologie chirurgicale avec dissection, Parodontologie, Masterclass et formation assistante dentaire, à Paris.',
+    description: 'Organisme certifié Qualiopi depuis 2002 : cursus Odontologie chirurgicale avec dissection, Parodontologie et formation assistante dentaire, à Paris.',
   },
   cursus: {
     title: "Cursus d'odontologie chirurgicale et parodontologie · SAPO Clinique",
-    description: 'Quatre formations pratiques pour chirurgiens-dentistes et assistantes : programme détaillé, objectifs, déroulé jour par jour.',
+    description: 'Trois formations pratiques pour chirurgiens-dentistes et assistantes : programme détaillé, objectifs, déroulé jour par jour.',
   },
   calendrier: {
     title: 'Calendrier des sessions · SAPO Clinique',
@@ -396,3 +399,5 @@ export function faqJsonLd(c) {
 
 /** Les 4 cursus avec page dédiée, dans l'ordre d'affichage. */
 export const cursusList = [cursus.chirurgie, cursus.parodontologie, cursus.masterclass, cursus.assistante];
+/** Cursus affichés dans les listings (hors `hidden`). */
+export const cursusVisibles = cursusList.filter(c => !c.hidden);
