@@ -536,6 +536,10 @@ select option { background: var(--panel); }
 .field.is-invalid input, .field.is-invalid select { border-color: #ffb4a8; }
 
 /* ------------------------------ Footer ------------------------------------ */
+/* Bandeau Qualiopi (accueil) : fond blanc imposé par la charte du logo. */
+.certif-band { background: #fff; padding: 32px 0; margin-top: 64px; }
+.certif-band__img { display: block; width: min(100%, 812px); height: auto; }
+
 .site-footer { border-top: 1px solid var(--line-strong); }
 .site-footer__grid {
   padding-top: 40px;

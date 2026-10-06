@@ -3,7 +3,7 @@
 ## Architecture
 
 - `src/data.mjs` — source de vérité unique (contenu, dates, SEO, JSON-LD).
-- `src/html.mjs` — helpers : `esc()`, `img()` (picture WebP+JPEG responsive), `arrow()`, `accIcon()`, `inscriptionHref(formKey, session)`.
+- `src/html.mjs` — helpers : `esc()`, `img()` (picture WebP+JPEG responsive, `width`/`height` optionnels), `arrow()`, `accIcon()`, `inscriptionHref(formKey, session)`.
 - `src/layout.mjs` — enveloppe de page (head SEO/CSP, header, footer). Appelée par build.mjs.
 - `src/pages/*.mjs` — un module par page. Export par défaut : un objet page **ou un tableau** d'objets page.
 - `build.mjs` — `node build.mjs` régénère tout le site dans `docs/`.

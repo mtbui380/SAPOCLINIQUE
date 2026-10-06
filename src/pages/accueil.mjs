@@ -190,11 +190,24 @@ function legalSection() {
 </section>`;
 }
 
+/* Bandeau de certification (logo Qualiopi + mention de la catégorie
+   certifiée, délivrée par ICPF sous accréditation Cofrac). Image fournie par
+   le certificateur, affichée à sa taille native (812 px) sur fond blanc
+   conformément à la charte Qualiopi. */
+function certifBandSection() {
+  return `<section class="certif-band" aria-label="Certification Qualiopi">
+  <div class="container">
+    ${img({ name: 'qualiopi-bandeau', widths: [812], width: 812, height: 193, sizes: '(max-width: 860px) 100vw, 812px', cls: 'certif-band__img', alt: `Qualiopi, processus certifié, République française. La certification qualité a été délivrée au titre de la catégorie d'actions suivante : actions de formation (L.6313-1 – 1°). Délivrée par ICPF Certification Qualité, accréditation Cofrac n° 5-0616, portée disponible sur www.cofrac.fr.` })}
+  </div>
+</section>`;
+}
+
 export default {
   path: '/',
   title: seo.accueil.title,
   description: seo.accueil.description,
   navKey: null,
+  mainClass: 'no-pad', // le bandeau Qualiopi blanc vient buter sur le pied de page
   jsonLd: [orgJsonLd(), ...cursusVisibles.map(c => courseJsonLd(c))],
   content: [
     heroSection(),
@@ -206,5 +219,6 @@ export default {
     statsSection(),
     communauteSection(),
     legalSection(),
+    certifBandSection(),
   ].join('\n\n'),
 };

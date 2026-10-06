@@ -19,14 +19,14 @@ export function esc(s) {
  * cls   : classes CSS de l'<img> (ex. "ph ar-32")
  * eager : true → loading eager + fetchpriority high (au-dessus de la ligne de flottaison)
  */
-export function img({ name, alt, widths = [800, 1600, 2400], sizes = '100vw', cls = '', eager = false }) {
+export function img({ name, alt, widths = [800, 1600, 2400], sizes = '100vw', cls = '', eager = false, width, height }) {
   const src = (ext, w) => widths.length > 1 ? `/assets/img/${name}-${w}.${ext}` : `/assets/img/${name}.${ext}`;
   const srcset = (ext) => widths.map(w => `${src(ext, w)} ${w}w`).join(', ');
   const biggest = widths[widths.length - 1];
   const loading = eager ? 'loading="eager" fetchpriority="high"' : 'loading="lazy" decoding="async"';
   return `<picture>` +
     `<source type="image/webp" srcset="${srcset('webp')}" sizes="${esc(sizes)}">` +
-    `<img src="${src('jpg', biggest)}" srcset="${srcset('jpg')}" sizes="${esc(sizes)}" alt="${esc(alt)}"${cls ? ` class="${esc(cls)}"` : ''} ${loading}>` +
+    `<img src="${src('jpg', biggest)}" srcset="${srcset('jpg')}" sizes="${esc(sizes)}" alt="${esc(alt)}"${cls ? ` class="${esc(cls)}"` : ''}${width && height ? ` width="${width}" height="${height}"` : ''} ${loading}>` +
     `</picture>`;
 }
 
