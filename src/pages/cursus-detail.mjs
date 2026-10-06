@@ -10,7 +10,8 @@ const illustrations = {
 };
 
 // Clé d'option du formulaire d'inscription par cursus.
-const formKeys = { chirurgie: 'chirurgie', parodontologie: 'parodontologie', masterclass: 'masterclass', assistante: 'assistante' };
+// Un cursus sans session programmée (sessions: []) renvoie vers Contact.
+const formKeys = { chirurgie: 'chirurgie', parodontologie: 'parodontologie', assistante: 'assistante' };
 
 function detailPage(c) {
   const ill = illustrations[c.key];
@@ -27,7 +28,9 @@ function detailPage(c) {
     <div class="card-row"><span>Public</span><span>${esc(c.public)}</span></div>
     <div class="card-row"><span>Format</span><span>${esc(c.format)}</span></div>
     <div class="card-row" style="padding-bottom:18px"><span>Tarif</span><span>${esc(c.price)}</span></div>
-    <a class="btn btn--primary" href="${inscriptionHref(formKey)}" style="display:block;padding:16px">S'inscrire</a>
+    ${c.sessions.length
+      ? `<a class="btn btn--primary" href="${inscriptionHref(formKey)}" style="display:block;padding:16px">S'inscrire</a>`
+      : `<a class="btn btn--primary" href="/contact/" style="display:block;padding:16px">Nous contacter</a>`}
     <a class="link-u small muted" href="#sessions" style="text-align:center;margin-top:14px;display:block">Voir les dates ci-dessous</a>
   </aside>
 </div>`;
@@ -60,13 +63,14 @@ function detailPage(c) {
   </div>
 </div>`;
 
-  const sessionRows = c.sessions.map(sess => `<div class="row-sess tnum">
+  const sessionRows = c.sessions.length ? c.sessions.map(sess => `<div class="row-sess tnum">
       <span class="eyebrow eyebrow--sm" style="padding-top:4px">${esc(sess.name)}</span>
       <div class="stack gap-3">
         ${sess.parts.map(pt => `<div class="row-dates"><span class="muted">${esc(pt.label)}</span><span>${esc(pt.dates)}</span></div>`).join('\n        ')}
       </div>
       <a class="btn btn--outline" href="${inscriptionHref(formKey, sess.name)}">S'inscrire<span class="visually-hidden"> — ${esc(c.title)}, ${esc(sess.name)}</span></a>
-    </div>`).join('\n    ');
+    </div>`).join('\n    ')
+    : `<p class="muted" style="padding:20px 0">Aucune date programmée pour le moment. <a class="link-u" href="/contact/">Contactez-nous</a> pour être informé de la prochaine session.</p>`;
 
   const sessions = `<div class="container section--md grid" id="sessions" style="row-gap:32px;align-items:start">
   <div class="gc-1-4 stack gap-4" style="padding-right:24px">

@@ -79,7 +79,7 @@ export const cursus = {
     intro: "Prise en charge actualisée des maladies parodontales, de la prévention à la chirurgie plastique. Travaux pratiques nombreux, des thérapeutiques ultrasonores au comblement des défauts infra-osseux et aux greffes, illustrés de démonstrations cliniques et de vidéos. Des modèles 3D permettent de transposer immédiatement l'apprentissage au cabinet.",
     sessionsNote: "Deux sessions identiques par an, chacune en deux modules de trois jours. Le module 1/2 (non chirurgical) et le module 2/2 (chirurgical) peuvent être suivis ensemble ou séparément, dans l'ordre de votre choix.",
     sessions: [
-      { name: 'Session 2027 · I', parts: [{ label: 'Module 1/2', dates: '13–15 janvier 2027' }, { label: 'Module 2/2', dates: '24–26 mars 2027' }] },
+      { name: 'Session 2027 · I', parts: [{ label: 'Module 1/2', dates: '13–15 janvier 2027' }, { label: 'Module 2/2', dates: '10–12 mars 2027' }] },
       { name: 'Session 2027 · II', parts: [{ label: 'Module 1/2', dates: '13–15 octobre 2027' }, { label: 'Module 2/2', dates: '8–10 décembre 2027' }] },
     ],
     goals: [
@@ -126,8 +126,8 @@ export const cursus = {
     seoDescription: 'Trois jours pour maîtriser MINST, greffes de recouvrement des incisives mandibulaires et chirurgie péri-implantaire. Pour praticiens expérimentés.',
     place: 'Faculté de chirurgie dentaire, Université Paris Cité (Descartes), Paris',
     intro: 'Trois jours pour maîtriser les nouveaux concepts en MINST, les greffes de recouvrement des incisives mandibulaires et la chirurgie parodontale péri-implantaire. Pour praticiens expérimentés ou anciens du cursus.',
-    sessionsNote: 'Une session par an, en un module unique de trois jours.',
-    sessions: [{ name: 'Session 2027', parts: [{ label: 'Module unique', dates: '12–14 mai 2027' }] }],
+    sessionsNote: "Pas de session programmée en 2027. La prochaine date sera annoncée ici ; contactez-nous pour en être informé.",
+    sessions: [],
     goals: [
       'Maîtriser le MINST et les nouvelles voies de régénération des défauts infra-osseux',
       'Pratiquer la greffe de gencive sans incision',
@@ -211,8 +211,7 @@ export const sessions = [
   { month: 'Oct 26', key: 'reunion', type: 'event', title: 'Conférence à la Réunion', promo: 'Odontologie chirurgicale', dates: '22–24 octobre', contact: true },
   { month: 'Janv 27', key: 'parodontologie', formKey: 'paro-m1', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 1/2', promo: 'Promotion 2027-I · non chirurgical · 3 jours', dates: '13–15 janvier' },
   { month: 'Janv 27', key: 'assistante', formKey: 'assistante', sess: 'Session janvier 2027', type: 'assist', title: 'Cursus Assistante en Parodontologie', promo: 'Promotion 2027 · 2 jours', dates: '13–14 janvier' },
-  { month: 'Mars 27', key: 'parodontologie', formKey: 'paro-m2', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 2/2', promo: 'Promotion 2027-I · chirurgical · 3 jours', dates: '24–26 mars' },
-  { month: 'Mai 27', key: 'masterclass', formKey: 'masterclass', sess: 'Session 2027', type: 'paro', title: 'Masterclass Parodontologie', promo: 'Promotion 2027 · 3 jours', dates: '12–14 mai' },
+  { month: 'Mars 27', key: 'parodontologie', formKey: 'paro-m2', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 2/2', promo: 'Promotion 2027-I · chirurgical · 3 jours', dates: '10–12 mars' },
   { month: 'Juin 27', key: 'chirurgie', formKey: 'chirurgie', sess: 'Promotion 2027', type: 'chir', title: 'Cursus Chirurgie', promo: 'Promotion 2027 · 2 × 3 jours', dates: '2–4 juin · sept (à confirmer)' },
   { month: 'Oct 27', key: 'assistante', formKey: 'assistante', sess: 'Session octobre 2027', type: 'assist', title: 'Cursus Assistante en Parodontologie', promo: 'Promotion 2027 · 2 jours', dates: '6–7 octobre' },
   { month: 'Oct 27', key: 'parodontologie', formKey: 'paro-m1', sess: 'Session 2027 · II', type: 'paro', title: 'Cursus Parodontologie · Module 1/2', promo: 'Promotion 2027-II · non chirurgical · 3 jours', dates: '13–15 octobre' },
@@ -272,7 +271,6 @@ export const formOptions = [
   { value: 'paro-m1', label: 'Cursus Parodontologie · Module 1/2', base: 'parodontologie', filter: 'Module 1/2' },
   { value: 'paro-m2', label: 'Cursus Parodontologie · Module 2/2', base: 'parodontologie', filter: 'Module 2/2' },
   { value: 'chir-paro', label: 'Cursus Chirurgie + Cursus Parodontologie', base: null },
-  { value: 'masterclass', label: 'Masterclass Parodontologie', base: 'masterclass' },
   { value: 'assistante', label: 'Cursus Assistante en Parodontologie', base: 'assistante' },
 ];
 
@@ -325,7 +323,7 @@ export const seo = {
   },
   calendrier: {
     title: 'Calendrier des sessions · SAPO Clinique',
-    description: 'Dates des cursus Odontologie chirurgicale, Parodontologie (modules 1/2 et 2/2), Masterclass et Assistante. Inscriptions ouvertes.',
+    description: 'Dates des cursus Odontologie chirurgicale, Parodontologie (modules 1/2 et 2/2) et Assistante. Inscriptions ouvertes.',
   },
   qui: {
     title: 'Qui sommes-nous · SAPO Clinique, formation continue depuis 2002',
