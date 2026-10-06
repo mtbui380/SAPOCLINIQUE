@@ -11,7 +11,11 @@ export const site = {
   email: 'contact@sapoclinique.com',
   instagram: 'https://www.instagram.com/',           // TODO : URL du compte Instagram
   descriptionCourte: 'Organisme de formation en odontologie chirurgicale et parodontologie, depuis 2002.',
-  qualiopi: { certificat: 'ICPF B05608', nda: '52490397949' },
+  qualiopi: {
+    certificat: 'ICPF B05608', nda: '52490397949',
+    // Dimensions intrinsèques des marques (docs/assets/img), pour les attributs width/height.
+    logoQualiopi: [201, 89], logoIcpf: [447, 139],
+  },
   referentHandicap: 'Philippe Blois',
   fondation: '2002',
   adresseSiege: { rue: '2 Allée William Turner', cp: '49240', ville: 'Avrillé' },

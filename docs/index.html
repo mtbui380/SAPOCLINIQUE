@@ -41,7 +41,7 @@
   </div>
   <nav class="nav-mobile" id="nav-mobile" aria-label="Navigation mobile"><a href="/SAPOCLINIQUE/cursus/">Cursus</a><a href="/SAPOCLINIQUE/calendrier/">Calendrier</a><a href="/SAPOCLINIQUE/qui-sommes-nous/">Qui sommes-nous</a><a href="/SAPOCLINIQUE/mediatheque/">Médiathèque</a><a href="/SAPOCLINIQUE/ressources/">Ressources</a><a href="/SAPOCLINIQUE/contact/">Contact</a></nav>
 </header>
-<main id="contenu" class="no-pad">
+<main id="contenu">
 <section class="hero" aria-label="Présentation">
   <!-- Pas d'attribut autoplay : site.js lance la lecture sauf prefers-reduced-motion et sauf mobile ; sans JS, le poster s'affiche (WCAG 2.2.2).
        Deux formats : WebM/VP9 (2,9 Mo, navigateurs modernes) puis H.264 (5,5 Mo, repli Safari/iOS). -->
@@ -253,12 +253,18 @@
       <p>Organisme de formation certifié Qualiopi au titre des actions de formation. Certificat ICPF B05608, NDA 52490397949.</p>
       <p>Formation accessible aux personnes en situation de handicap. <a class="link-u" href="/SAPOCLINIQUE/contact/">Contactez-nous</a> pour toute demande de renseignement.</p>
     </div>
-  </div>
-</section>
-
-<section class="certif-band" aria-label="Certification Qualiopi">
-  <div class="container">
-    <picture><source type="image/webp" srcset="/SAPOCLINIQUE/assets/img/qualiopi-bandeau.webp 812w" sizes="(max-width: 860px) 100vw, 812px"><img src="/SAPOCLINIQUE/assets/img/qualiopi-bandeau.jpg" srcset="/SAPOCLINIQUE/assets/img/qualiopi-bandeau.jpg 812w" sizes="(max-width: 860px) 100vw, 812px" alt="Qualiopi, processus certifié, République française. La certification qualité a été délivrée au titre de la catégorie d'actions suivante : actions de formation (L.6313-1 – 1°). Délivrée par ICPF Certification Qualité, accréditation Cofrac n° 5-0616, portée disponible sur www.cofrac.fr." class="certif-band__img" width="812" height="193" loading="lazy" decoding="async"></picture>
+    <!-- Marques de certification : logo Qualiopi (charte : couleurs d'origine sur fond
+         clair, accompagné de la mention des catégories certifiées) et marque combinée
+         ICPF + Cofrac, reproduite telle que livrée par le certificateur. -->
+    <div class="gc-full certif rule-top">
+      <div class="certif__item">
+        <span class="certif__plaque"><img src="/SAPOCLINIQUE/assets/img/logo-qualiopi.png" width="201" height="89" alt="Qualiopi, processus certifié, République française" loading="lazy" decoding="async"></span>
+        <p class="certif__text">La certification qualité a été délivrée au titre de la catégorie d'actions suivante :<br><span class="certif__cat">Actions de formation</span> <span class="tnum">(L.6313-1 – 1°)</span></p>
+      </div>
+      <div class="certif__item">
+        <span class="certif__plaque certif__plaque--icpf"><img src="/SAPOCLINIQUE/assets/img/logo-icpf-cofrac.png" width="447" height="139" alt="Délivrée par ICPF Certification Qualité, accréditation Cofrac n° 5-0616, portée disponible sur www.cofrac.fr" loading="lazy" decoding="async"></span>
+      </div>
+    </div>
   </div>
 </section>
 </main>

@@ -179,25 +179,26 @@ function communauteSection() {
 }
 
 function legalSection() {
+  const q = site.qualiopi;
   return `<section class="container section" aria-label="Certification">
   <div class="grid">
     <div class="gc-1-7 rule-top small muted stack gap-3" style="padding-top:20px;line-height:1.8">
       <p>SAPO CLINIQUE a été fondée en 2002 et poursuit l'enseignement initial créé par le Professeur Jean-François GAUDY.</p>
-      <p>Organisme de formation certifié Qualiopi au titre des actions de formation. Certificat ${esc(site.qualiopi.certificat)}, NDA ${esc(site.qualiopi.nda)}.</p>
+      <p>Organisme de formation certifié Qualiopi au titre des actions de formation. Certificat ${esc(q.certificat)}, NDA ${esc(q.nda)}.</p>
       <p>Formation accessible aux personnes en situation de handicap. <a class="link-u" href="/contact/">Contactez-nous</a> pour toute demande de renseignement.</p>
     </div>
-  </div>
-</section>`;
-}
-
-/* Bandeau de certification (logo Qualiopi + mention de la catégorie
-   certifiée, délivrée par ICPF sous accréditation Cofrac). Image fournie par
-   le certificateur, affichée à sa taille native (812 px) sur fond blanc
-   conformément à la charte Qualiopi. */
-function certifBandSection() {
-  return `<section class="certif-band" aria-label="Certification Qualiopi">
-  <div class="container">
-    ${img({ name: 'qualiopi-bandeau', widths: [812], width: 812, height: 193, sizes: '(max-width: 860px) 100vw, 812px', cls: 'certif-band__img', alt: `Qualiopi, processus certifié, République française. La certification qualité a été délivrée au titre de la catégorie d'actions suivante : actions de formation (L.6313-1 – 1°). Délivrée par ICPF Certification Qualité, accréditation Cofrac n° 5-0616, portée disponible sur www.cofrac.fr.` })}
+    <!-- Marques de certification : logo Qualiopi (charte : couleurs d'origine sur fond
+         clair, accompagné de la mention des catégories certifiées) et marque combinée
+         ICPF + Cofrac, reproduite telle que livrée par le certificateur. -->
+    <div class="gc-full certif rule-top">
+      <div class="certif__item">
+        <span class="certif__plaque"><img src="/assets/img/logo-qualiopi.png" width="${q.logoQualiopi[0]}" height="${q.logoQualiopi[1]}" alt="Qualiopi, processus certifié, République française" loading="lazy" decoding="async"></span>
+        <p class="certif__text">La certification qualité a été délivrée au titre de la catégorie d'actions suivante :<br><span class="certif__cat">Actions de formation</span> <span class="tnum">(L.6313-1 – 1°)</span></p>
+      </div>
+      <div class="certif__item">
+        <span class="certif__plaque certif__plaque--icpf"><img src="/assets/img/logo-icpf-cofrac.png" width="${q.logoIcpf[0]}" height="${q.logoIcpf[1]}" alt="Délivrée par ICPF Certification Qualité, accréditation Cofrac n° 5-0616, portée disponible sur www.cofrac.fr" loading="lazy" decoding="async"></span>
+      </div>
+    </div>
   </div>
 </section>`;
 }
@@ -207,7 +208,6 @@ export default {
   title: seo.accueil.title,
   description: seo.accueil.description,
   navKey: null,
-  mainClass: 'no-pad', // le bandeau Qualiopi blanc vient buter sur le pied de page
   jsonLd: [orgJsonLd(), ...cursusVisibles.map(c => courseJsonLd(c))],
   content: [
     heroSection(),
@@ -219,6 +219,5 @@ export default {
     statsSection(),
     communauteSection(),
     legalSection(),
-    certifBandSection(),
   ].join('\n\n'),
 };
