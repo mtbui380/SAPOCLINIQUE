@@ -17,7 +17,7 @@ const cursusMeta = {
 function heroSection() {
   return `<section class="hero" aria-label="Présentation">
   <!-- Pas d'attribut autoplay : site.js lance la lecture sauf prefers-reduced-motion et sauf mobile ; sans JS, le poster s'affiche (WCAG 2.2.2).
-       Deux formats : WebM/VP9 (1,5 Mo, navigateurs modernes) puis H.264 (3 Mo, repli Safari/iOS). -->
+       Deux formats : WebM/VP9 (2,9 Mo, navigateurs modernes) puis H.264 (5,5 Mo, repli Safari/iOS). -->
   <video class="hero__video" poster="/assets/img/hero-poster.jpg" preload="metadata" muted loop playsinline aria-hidden="true">
     <source src="/assets/video/hero.webm" type="video/webm">
     <source src="/assets/video/hero.mp4" type="video/mp4">
