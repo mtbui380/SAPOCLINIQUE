@@ -15,6 +15,9 @@ export const site = {
     certificat: 'ICPF B05608', nda: '52490397949',
     // Dimensions intrinsèques des marques (docs/assets/img), pour les attributs width/height.
     logoQualiopi: [201, 89], logoIcpf: [447, 139],
+    // Certificat PDF. TODO : hébergé sur l'ancien site Wix — le copier dans
+    // docs/assets/ et mettre à jour ce lien AVANT la bascule du domaine.
+    certificatUrl: 'https://www.sapoclinique.com/_files/ugd/b35fc7_ddfaa9fea3664895b0700f5ab9416fa7.pdf',
   },
   referentHandicap: 'Philippe Blois',
   fondation: '2002',
