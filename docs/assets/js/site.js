@@ -134,32 +134,6 @@
     });
   }
 
-  /* ------------------------- Carrousels [data-rail] --------------------
-     Rangée défilante native (scroll-snap) ; les flèches ne sont affichées
-     qu'avec JS et que si le contenu déborde.                            */
-  document.querySelectorAll('[data-rail-wrap]').forEach(function (wrap) {
-    var rail = wrap.querySelector('[data-rail]');
-    var prev = wrap.querySelector('[data-rail-prev]');
-    var next = wrap.querySelector('[data-rail-next]');
-    if (!rail || !prev || !next) return;
-    function step() {
-      var card = rail.firstElementChild;
-      return card ? (card.getBoundingClientRect().width + 16) * 2 : rail.clientWidth;
-    }
-    function update() {
-      var max = rail.scrollWidth - rail.clientWidth - 1;
-      var overflow = max > 0;
-      prev.hidden = next.hidden = !overflow;
-      prev.disabled = rail.scrollLeft <= 0;
-      next.disabled = rail.scrollLeft >= max;
-    }
-    prev.addEventListener('click', function () { rail.scrollBy({ left: -step(), behavior: 'smooth' }); });
-    next.addEventListener('click', function () { rail.scrollBy({ left: step(), behavior: 'smooth' }); });
-    rail.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    update();
-  });
-
   /* --------------------- Formulaire de préinscription ------------------ */
   var form = document.getElementById('inscription-form');
   if (!form) return;

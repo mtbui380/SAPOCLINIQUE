@@ -280,9 +280,8 @@ export const equipe = [
     bio: ['Détachée ponctuellement pour le suivi administratif et la formation'] },
 ];
 
-/** Formateurs occasionnels (encadrement des TP), en carrousel, sans portrait. */
+/** Formateurs occasionnels (encadrement des TP) : mêmes cartes que l'équipe, sans portrait. */
 export const formateursOccasionnels = {
-  intro: "Tous chirurgiens-dentistes diplômés, ils assistent les formateurs pour l'encadrement des travaux pratiques.",
   role: 'Chirurgien-dentiste · Formateur',
   noms: ['Julie Poline', 'Tanguy Rouxel', 'Delphine Schmidt-Mercier', 'Manon Lecorre', 'Nicolas Cailleux', 'Alexis Nicolas', 'Alexandre Azoulay', 'Eric Arsene', 'Stéphane Mahe', 'Louis Martin', 'Sarah Millot'],
 };
