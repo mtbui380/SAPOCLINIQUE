@@ -471,7 +471,27 @@ main.no-pad { padding-bottom: 0; }
 figcaption { font-size: 12px; color: var(--muted); padding-top: 10px; }
 
 /* Équipe */
-.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 24px; }
+/* Équipe : carrousel horizontal, 3 cartes visibles (2 sur mobile), défilement
+   par page avec accroche ; flèches ajoutées par site.js (data-rail). */
+.team-rail {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 2px 0;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.team-rail::-webkit-scrollbar { display: none; }
+.team-rail .team-card { flex: 0 0 calc((100% - 48px) / 3); scroll-snap-align: start; }
+@media (max-width: 720px) {
+  .team-rail { gap: 16px; }
+  .team-rail .team-card { flex-basis: calc((100% - 16px) / 2); }
+}
+.rail-nav { display: flex; gap: 8px; }
+.rail-btn[disabled] { opacity: .35; cursor: default; }
+.rail-btn[disabled]:hover { border-color: var(--line-strong); }
 .team-card { display: flex; flex-direction: column; gap: 12px; }
 .team-card .ph { aspect-ratio: 4/5; }
 .team-card__nom { font-size: 16px; }

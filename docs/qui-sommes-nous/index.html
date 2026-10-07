@@ -53,80 +53,87 @@
   </figure>
 </div>
 
-<section class="container section--md grid" aria-labelledby="h-equipe" style="row-gap:32px;align-items:start">
-  <h2 id="h-equipe" class="gc-1-3 h2-lg">L'équipe pédagogique</h2>
-  <div class="gc-4-9 team-grid">
-    <div class="team-card">
+<section class="container section--md grid" aria-labelledby="h-equipe" style="row-gap:32px;align-items:start" data-rail-wrap>
+  <div class="gc-1-3 stack gap-5">
+    <h2 id="h-equipe" class="h2-lg">L'équipe pédagogique</h2>
+    <!-- Flèches affichées par site.js ; sans JS, la rangée défile au doigt ou à la molette. -->
+    <div class="rail-nav">
+      <button class="social-btn rail-btn" type="button" data-rail-prev aria-label="Membres précédents" hidden><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 3L5 8l5 5"></path></svg></button>
+      <button class="social-btn rail-btn" type="button" data-rail-next aria-label="Membres suivants" hidden><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3l5 5-5 5"></path></svg></button>
+    </div>
+  </div>
+  <ul class="gc-4-9 team-rail" data-rail aria-label="Membres de l'équipe" tabindex="0">
+    <li class="team-card">
       <picture><source type="image/webp" srcset="/SAPOCLINIQUE/assets/img/portrait-blois.webp 480w" sizes="220px"><img style="object-position:50% 15%" src="/SAPOCLINIQUE/assets/img/portrait-blois.jpg" srcset="/SAPOCLINIQUE/assets/img/portrait-blois.jpg 480w" sizes="220px" alt="Dr Philippe Blois" class="ph" loading="lazy" decoding="async"></picture>
       <span class="team-card__nom">Dr Philippe Blois</span>
       <span class="team-card__role"><span class="team-card__titre">Co-directeur<br>Odontologie chirurgicale</span><br>Chargé de cours et de travaux pratiques<br>Conférencier<br>Responsable qualité Qualiopi</span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <picture><source type="image/webp" srcset="/SAPOCLINIQUE/assets/img/portrait-rzeznik.webp 480w" sizes="220px"><img style="object-position:50% 20%" src="/SAPOCLINIQUE/assets/img/portrait-rzeznik.jpg" srcset="/SAPOCLINIQUE/assets/img/portrait-rzeznik.jpg 480w" sizes="220px" alt="Dr Matthias Rzeznik" class="ph" loading="lazy" decoding="async"></picture>
       <span class="team-card__nom">Dr Matthias Rzeznik</span>
       <span class="team-card__role"><span class="team-card__titre">Co-directeur<br>Parodontiste exclusif</span><br>Chargé de cours et de travaux pratiques<br>Conférencier et auteur</span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">MB</span>
       <span class="team-card__nom">Mélanie Blois</span>
       <span class="team-card__role"><span class="team-card__titre">Assistante dentaire</span><br>Détachée ponctuellement pour le suivi administratif et la formation</span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">JP</span>
       <span class="team-card__nom">Julie Poline</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">TR</span>
       <span class="team-card__nom">Tanguy Rouxel</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">DS</span>
       <span class="team-card__nom">Delphine Schmidt-Mercier</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">ML</span>
       <span class="team-card__nom">Manon Lecorre</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">NC</span>
       <span class="team-card__nom">Nicolas Cailleux</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">AN</span>
       <span class="team-card__nom">Alexis Nicolas</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">AA</span>
       <span class="team-card__nom">Alexandre Azoulay</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">EA</span>
       <span class="team-card__nom">Eric Arsene</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">SM</span>
       <span class="team-card__nom">Stéphane Mahe</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">LM</span>
       <span class="team-card__nom">Louis Martin</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-    <div class="team-card">
+    </li>
+    <li class="team-card">
       <span class="ph team-card__initiales" aria-hidden="true">SM</span>
       <span class="team-card__nom">Sarah Millot</span>
       <span class="team-card__role"><span class="team-card__titre">Chirurgien-dentiste<br>Formateur</span></span>
-    </div>
-  </div>
+    </li>
+  </ul>
 </section>
 
 <section class="container section" aria-label="Certification">

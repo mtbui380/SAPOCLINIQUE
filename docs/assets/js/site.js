@@ -134,6 +134,33 @@
     });
   }
 
+  /* ------------------------- Carrousels [data-rail] --------------------
+     Rangée défilante native (scroll-snap) ; les flèches ne sont affichées
+     qu'avec JS et que si le contenu déborde, et avancent d'une page
+     (toutes les cartes visibles).                                        */
+  document.querySelectorAll('[data-rail-wrap]').forEach(function (wrap) {
+    var rail = wrap.querySelector('[data-rail]');
+    var prev = wrap.querySelector('[data-rail-prev]');
+    var next = wrap.querySelector('[data-rail-next]');
+    if (!rail || !prev || !next) return;
+    function page() {
+      var gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
+      return rail.clientWidth + gap;
+    }
+    function update() {
+      var max = rail.scrollWidth - rail.clientWidth - 1;
+      var overflow = max > 0;
+      prev.hidden = next.hidden = !overflow;
+      prev.disabled = rail.scrollLeft <= 0;
+      next.disabled = rail.scrollLeft >= max;
+    }
+    prev.addEventListener('click', function () { rail.scrollBy({ left: -page(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { rail.scrollBy({ left: page(), behavior: 'smooth' }); });
+    rail.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
   /* --------------------- Formulaire de préinscription ------------------ */
   var form = document.getElementById('inscription-form');
   if (!form) return;
