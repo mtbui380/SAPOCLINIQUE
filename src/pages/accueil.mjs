@@ -179,12 +179,28 @@ function communauteSection() {
 }
 
 function legalSection() {
+  const q = site.qualiopi;
   return `<section class="container section" aria-label="Certification">
   <div class="grid">
     <div class="gc-1-7 rule-top small muted stack gap-3" style="padding-top:20px;line-height:1.8">
       <p>SAPO CLINIQUE a été fondée en 2002 et poursuit l'enseignement initial créé par le Professeur Jean-François GAUDY.</p>
-      <p>Organisme de formation certifié Qualiopi au titre des actions de formation. Certificat ${esc(site.qualiopi.certificat)}, NDA ${esc(site.qualiopi.nda)}.</p>
+      <p>Organisme de formation certifié Qualiopi au titre des actions de formation. Certificat ${esc(q.certificat)}, NDA ${esc(q.nda)}.</p>
       <p>Formation accessible aux personnes en situation de handicap. <a class="link-u" href="/contact/">Contactez-nous</a> pour toute demande de renseignement.</p>
+    </div>
+    <!-- Marques de certification : logo Qualiopi (charte : couleurs d'origine sur fond
+         clair, accompagné de la mention des catégories certifiées) et marque combinée
+         ICPF + Cofrac, reproduite telle que livrée par le certificateur. -->
+    <div class="gc-full certif rule-top">
+      <div class="certif__item">
+        <span class="certif__plaque"><img src="/assets/img/logo-qualiopi.png" width="${q.logoQualiopi[0]}" height="${q.logoQualiopi[1]}" alt="Qualiopi, processus certifié, République française" loading="lazy" decoding="async"></span>
+        <div class="certif__text">
+          <p>La certification qualité a été délivrée au titre de la catégorie d'actions suivante :<br><span class="certif__cat">Actions de formation</span> <span class="tnum">(L.6313-1 – 1°)</span></p>
+          <a class="link-u certif__link" href="${esc(q.certificatUrl)}" target="_blank" rel="noopener">Voir le certificat<span class="visually-hidden"> Qualiopi (PDF, nouvelle fenêtre)</span></a>
+        </div>
+      </div>
+      <div class="certif__item">
+        <span class="certif__plaque certif__plaque--icpf"><img src="/assets/img/logo-icpf-cofrac.png" width="${q.logoIcpf[0]}" height="${q.logoIcpf[1]}" alt="Délivrée par ICPF Certification Qualité, accréditation Cofrac n° 5-0616, portée disponible sur www.cofrac.fr" loading="lazy" decoding="async"></span>
+      </div>
     </div>
   </div>
 </section>`;

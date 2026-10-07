@@ -11,7 +11,13 @@ export const site = {
   email: 'contact@sapoclinique.com',
   instagram: 'https://www.instagram.com/',           // TODO : URL du compte Instagram
   descriptionCourte: 'Organisme de formation en odontologie chirurgicale et parodontologie, depuis 2002.',
-  qualiopi: { certificat: 'ICPF B05608', nda: '52490397949' },
+  qualiopi: {
+    certificat: 'ICPF B05608', nda: '52490397949',
+    // Dimensions intrinsèques des marques (docs/assets/img), pour les attributs width/height.
+    logoQualiopi: [201, 89], logoIcpf: [447, 139],
+    // Certificat PDF (ICPF, valide du 10/02/2026 au 09/02/2029) hébergé dans docs/assets/docs.
+    certificatUrl: '/assets/docs/certificat-qualiopi-B05608.pdf',
+  },
   referentHandicap: 'Philippe Blois',
   fondation: '2002',
   adresseSiege: { rue: '2 Allée William Turner', cp: '49240', ville: 'Avrillé' },
@@ -252,9 +258,9 @@ export const chips = [
 // Statistiques et équipe.
 // ---------------------------------------------------------------------------
 export const stats = [
-  { value: '8,9', unit: '/10', label: 'Satisfaction, cursus Parodontologie', source: 'Enquête mars 2025' },
-  { value: '8,4', unit: '/10', label: 'Satisfaction, cursus Chirurgie', source: 'Enquête septembre 2025' },
-  { value: '100', unit: '%', label: 'Ont fait évoluer leur pratique et recommandent la formation', source: 'Toutes sessions 2025' },
+  { value: '9,6', unit: '/10', label: 'Satisfaction, cursus Parodontologie', source: 'Enquête 2026' },
+  { value: '9,2', unit: '/10', label: 'Satisfaction, cursus Chirurgie', source: 'Enquête septembre 2026' },
+  { value: '100', unit: '%', label: 'Ont fait évoluer leur pratique et recommandent la formation', source: 'Sessions 2026' },
 ];
 
 export const equipe = [

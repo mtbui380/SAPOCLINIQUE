@@ -3,7 +3,7 @@
 ## Architecture
 
 - `src/data.mjs` — source de vérité unique (contenu, dates, SEO, JSON-LD).
-- `src/html.mjs` — helpers : `esc()`, `img()` (picture WebP+JPEG responsive), `arrow()`, `accIcon()`, `inscriptionHref(formKey, session)`.
+- `src/html.mjs` — helpers : `esc()`, `img()` (picture WebP+JPEG responsive, `width`/`height` optionnels), `arrow()`, `accIcon()`, `inscriptionHref(formKey, session)`.
 - `src/layout.mjs` — enveloppe de page (head SEO/CSP, header, footer). Appelée par build.mjs.
 - `src/pages/*.mjs` — un module par page. Export par défaut : un objet page **ou un tableau** d'objets page.
 - `build.mjs` — `node build.mjs` régénère tout le site dans `docs/`.
@@ -17,7 +17,7 @@ export default {
   path: '/calendrier/',            // URL, avec / final ; fichier écrit : docs/calendrier/index.html
   title: seo.calendrier.title,     // <title> — depuis data.mjs
   description: seo.calendrier.description,
-  navKey: 'calendrier',            // souligne l'onglet actif : cursus|calendrier|qui|mediatheque|ressources|contact ou null
+  navKey: 'calendrier',            // souligne l'onglet actif : cursus|calendrier|qui|ressources|contact ou null
   noindex: false,                  // true → meta robots noindex + exclu du sitemap
   jsonLd: [orgJsonLd()],           // tableau @graph, ou omis
   content: `<section>…</section>`, // contenu du <main> uniquement

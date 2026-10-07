@@ -24,6 +24,7 @@ const TYPES = {
   '.webm': 'video/webm',
   '.woff2': 'font/woff2',
   '.xml': 'application/xml',
+  '.pdf': 'application/pdf',
   '.txt': 'text/plain; charset=utf-8',
   '.ico': 'image/x-icon',
 };
