@@ -270,11 +270,21 @@ export const temoignages = [
   { auteur: 'Hubert', cursus: 'Cursus Odontologie chirurgicale', texte: "Le cursus d'odontologie chirurgicale m'a beaucoup apporté et rassuré. Revoir toute l'anatomie, par exemple, a été très important. Dans mes actes de chirurgie, je me sens beaucoup plus à l'aise maintenant." },
 ];
 
+/** Équipe (page Qui sommes-nous). `img` absent → carte sans portrait (initiales). */
 export const equipe = [
-  { nom: 'Dr Philippe Blois', role: 'Co-directeur · Odontologie chirurgicale', img: 'portrait-blois', pos: '50% 15%' },
-  { nom: 'Dr Matthias Rzeznik', role: 'Co-directeur · Parodontologie', img: 'portrait-rzeznik', pos: '50% 20%' },
-  // TODO : compléter l'équipe (formateurs, référent handicap) — portraits + noms.
+  { nom: 'Dr Philippe Blois', role: 'Co-directeur · Odontologie chirurgicale', img: 'portrait-blois', pos: '50% 15%',
+    bio: ['Chargé de cours et de travaux pratiques', 'Conférencier', 'Responsable qualité Qualiopi'] },
+  { nom: 'Dr Matthias Rzeznik', role: 'Co-directeur · Parodontiste exclusif', img: 'portrait-rzeznik', pos: '50% 20%',
+    bio: ['Chargé de cours et de travaux pratiques', 'Conférencier et auteur'] },
+  { nom: 'Mélanie Blois', role: 'Assistante dentaire',
+    bio: ['Détachée ponctuellement pour le suivi administratif et la formation'] },
 ];
+
+/** Formateurs occasionnels (encadrement des TP) : mêmes cartes que l'équipe, sans portrait. */
+export const formateursOccasionnels = {
+  role: 'Chirurgien-dentiste · Formateur',
+  noms: ['Julie Poline', 'Tanguy Rouxel', 'Delphine Schmidt-Mercier', 'Manon Lecorre', 'Nicolas Cailleux', 'Alexis Nicolas', 'Alexandre Azoulay', 'Eric Arsene', 'Stéphane Mahe', 'Louis Martin', 'Sarah Millot'],
+};
 
 // ---------------------------------------------------------------------------
 // Formulaire de préinscription : options de formation → sessions proposées.
