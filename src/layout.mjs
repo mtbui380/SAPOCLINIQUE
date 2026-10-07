@@ -8,7 +8,8 @@ const CSP = [
   "img-src 'self' data:",
   "font-src 'self'",
   "media-src 'self'",
-  "connect-src 'self'",   // ajouter ici l'origine du service de formulaires si utilisé
+  // Origine du service de formulaires ajoutée automatiquement si site.contactEndpoint est renseigné.
+  "connect-src 'self'" + (site.contactEndpoint ? ' ' + new URL(site.contactEndpoint).origin : ''),
   "base-uri 'self'",
   "form-action 'self'",
 ].join('; ');
