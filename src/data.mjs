@@ -15,9 +15,8 @@ export const site = {
     certificat: 'ICPF B05608', nda: '52490397949',
     // Dimensions intrinsèques des marques (docs/assets/img), pour les attributs width/height.
     logoQualiopi: [201, 89], logoIcpf: [447, 139],
-    // Certificat PDF. TODO : hébergé sur l'ancien site Wix — le copier dans
-    // docs/assets/ et mettre à jour ce lien AVANT la bascule du domaine.
-    certificatUrl: 'https://www.sapoclinique.com/_files/ugd/b35fc7_ddfaa9fea3664895b0700f5ab9416fa7.pdf',
+    // Certificat PDF (ICPF, valide du 10/02/2026 au 09/02/2029) hébergé dans docs/assets/docs.
+    certificatUrl: '/assets/docs/certificat-qualiopi-B05608.pdf',
   },
   referentHandicap: 'Philippe Blois',
   fondation: '2002',
@@ -259,9 +258,9 @@ export const chips = [
 // Statistiques et équipe.
 // ---------------------------------------------------------------------------
 export const stats = [
-  { value: '8,9', unit: '/10', label: 'Satisfaction, cursus Parodontologie', source: 'Enquête mars 2025' },
-  { value: '8,4', unit: '/10', label: 'Satisfaction, cursus Chirurgie', source: 'Enquête septembre 2025' },
-  { value: '100', unit: '%', label: 'Ont fait évoluer leur pratique et recommandent la formation', source: 'Toutes sessions 2025' },
+  { value: '9,6', unit: '/10', label: 'Satisfaction, cursus Parodontologie', source: 'Enquête 2026' },
+  { value: '9,2', unit: '/10', label: 'Satisfaction, cursus Chirurgie', source: 'Enquête septembre 2026' },
+  { value: '100', unit: '%', label: 'Ont fait évoluer leur pratique et recommandent la formation', source: 'Sessions 2026' },
 ];
 
 export const equipe = [

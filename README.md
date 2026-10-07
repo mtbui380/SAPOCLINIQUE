@@ -53,9 +53,6 @@ Pour passer à un service de formulaires (Formspree, etc.) : renseigner
 - [ ] **Mentions légales** : forme juridique, SIREN, directeur de la publication,
       durée de conservation des dossiers (`src/pages/mentions-legales.mjs`).
 - [ ] **CGV** : document à rédiger et à lier.
-- [ ] **Certificat Qualiopi (PDF)** : le lien « Voir le certificat » de l'accueil pointe
-      encore vers le fichier hébergé par l'ancien site Wix. Copier le PDF dans `docs/assets/`
-      et mettre à jour `certificatUrl` dans `src/data.mjs` avant la bascule du domaine.
 - [ ] **Tarifs** : affichés « Sur demande » — publier les prix quand ils seront arrêtés
       (`price` dans `src/data.mjs`).
 - [ ] **Équipe** : portraits et noms des autres formateurs + référent handicap
