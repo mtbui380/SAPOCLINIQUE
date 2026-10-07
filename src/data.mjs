@@ -31,7 +31,7 @@ export const site = {
 export const cursus = {
   chirurgie: {
     key: 'chirurgie', slug: 'chirurgie',
-    title: 'Cursus Chirurgie', tag: 'Chirurgical', format: '2 modules de 3 jours',
+    title: 'Cursus Odontologie chirurgicale', tag: 'Chirurgical', format: '2 modules de 3 jours',
     public: 'Chirurgiens-dentistes', price: 'Sur demande',
     seoDescription: "Formation en odontologie chirurgicale : analgésie, CBCT, sutures, hémostase, et une journée de dissection sur corps humain à l'École de Chirurgie de Paris.",
     place: "Faculté de chirurgie dentaire, Université Paris Cité (Descartes), Paris · journée de dissection à l'École de Chirurgie de l'AP-HP",
@@ -216,12 +216,12 @@ export const cursus = {
 // ---------------------------------------------------------------------------
 export const sessions = [
   { month: 'Mai 26', key: 'masterclass', type: 'paro', title: 'Masterclass Parodontologie', promo: 'Promotion 2026 · 3 jours', dates: '20–22 mai 2026', past: true },
-  { month: 'Juin 26', key: 'chirurgie', type: 'chir', title: 'Cursus Chirurgie, avec dissection', promo: 'Promotion 2026 · 2 × 3 jours', dates: '10–12 juin · 16–18 sept 2026', past: true },
+  { month: 'Juin 26', key: 'chirurgie', type: 'chir', title: 'Cursus Odontologie chirurgicale, avec dissection', promo: 'Promotion 2026 · 2 × 3 jours', dates: '10–12 juin · 16–18 sept 2026', past: true },
   { month: 'Oct 26', key: 'reunion', type: 'event', title: 'Conférence à la Réunion', promo: 'Odontologie chirurgicale', dates: '22–24 octobre', contact: true },
   { month: 'Janv 27', key: 'parodontologie', formKey: 'paro-m1', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 1/2', promo: 'Promotion 2027-I · non chirurgical · 3 jours', dates: '13–15 janvier' },
   { month: 'Janv 27', key: 'assistante', formKey: 'assistante', sess: 'Session janvier 2027', type: 'assist', title: 'Cursus Assistante en Parodontologie', promo: 'Promotion 2027 · 2 jours', dates: '13–14 janvier' },
   { month: 'Mars 27', key: 'parodontologie', formKey: 'paro-m2', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 2/2', promo: 'Promotion 2027-I · chirurgical · 3 jours', dates: '10–12 mars' },
-  { month: 'Juin 27', key: 'chirurgie', formKey: 'chirurgie', sess: 'Promotion 2027', type: 'chir', title: 'Cursus Chirurgie', promo: 'Promotion 2027 · 2 × 3 jours', dates: '2–4 juin · sept (à confirmer)' },
+  { month: 'Juin 27', key: 'chirurgie', formKey: 'chirurgie', sess: 'Promotion 2027', type: 'chir', title: 'Cursus Odontologie chirurgicale', promo: 'Promotion 2027 · 2 × 3 jours', dates: '2–4 juin · sept (à confirmer)' },
   { month: 'Oct 27', key: 'assistante', formKey: 'assistante', sess: 'Session octobre 2027', type: 'assist', title: 'Cursus Assistante en Parodontologie', promo: 'Promotion 2027 · 2 jours', dates: '6–7 octobre' },
   { month: 'Oct 27', key: 'parodontologie', formKey: 'paro-m1', sess: 'Session 2027 · II', type: 'paro', title: 'Cursus Parodontologie · Module 1/2', promo: 'Promotion 2027-II · non chirurgical · 3 jours', dates: '13–15 octobre' },
   { month: 'Déc 27', key: 'parodontologie', formKey: 'paro-m2', sess: 'Session 2027 · II', type: 'paro', title: 'Cursus Parodontologie · Module 2/2', promo: 'Promotion 2027-II · chirurgical · 3 jours', dates: '8–10 décembre' },
@@ -251,7 +251,7 @@ export const upcomingYearsLabel = upcomingYears.length > 1
   : upcomingYears[0];
 
 export const chips = [
-  ['tous', 'Toutes'], ['chir', 'Chirurgie'], ['paro', 'Parodontologie'], ['assist', 'Assistantes'], ['event', 'Événements'],
+  ['tous', 'Toutes'], ['chir', 'Odontologie chirurgicale'], ['paro', 'Parodontologie'], ['assist', 'Assistantes'], ['event', 'Événements'],
 ];
 
 // ---------------------------------------------------------------------------
@@ -259,8 +259,15 @@ export const chips = [
 // ---------------------------------------------------------------------------
 export const stats = [
   { value: '9,6', unit: '/10', label: 'Satisfaction, cursus Parodontologie', source: 'Enquête 2026' },
-  { value: '9,2', unit: '/10', label: 'Satisfaction, cursus Chirurgie', source: 'Enquête septembre 2026' },
+  { value: '9,2', unit: '/10', label: 'Satisfaction, cursus Odontologie chirurgicale', source: 'Enquête septembre 2026' },
   { value: '100', unit: '%', label: 'Ont fait évoluer leur pratique et recommandent la formation', source: 'Sessions 2026' },
+];
+
+/** Témoignages d'anciens participants (accueil, sous les statistiques). Prénom seul. */
+export const temoignages = [
+  { auteur: 'Maria', cursus: 'Cursus Parodontologie', texte: "Une approche qui permet de mettre en place des façons simples de prendre en charge les patients paro au cabinet. Je pensais la chirurgie trop compliquée à intégrer à ma pratique. Avec Matthias, on apprend des gestes simples, et on voit que c'est faisable. Ça m'a vraiment donné envie de m'y mettre. Je recommande." },
+  { auteur: 'Marine', cursus: 'Cursus Odontologie chirurgicale', texte: "Je le recommande à tous ceux qui veulent se lancer dans la chirurgie : cela me paraît indispensable pour vraiment bien s'y connaître avant de commencer, que ce soit pour des implants, des greffes gingivales ou n'importe quelle chirurgie en bouche. Je recommande vivement, merci à toute l'équipe." },
+  { auteur: 'Hubert', cursus: 'Cursus Odontologie chirurgicale', texte: "Le cursus d'odontologie chirurgicale m'a beaucoup apporté et rassuré. Revoir toute l'anatomie, par exemple, a été très important. Dans mes actes de chirurgie, je me sens beaucoup plus à l'aise maintenant." },
 ];
 
 export const equipe = [
@@ -275,11 +282,11 @@ export const equipe = [
 function shortDates(d) { return d.replace(/\s*\(à confirmer\)/, ''); }
 
 export const formOptions = [
-  { value: 'chirurgie', label: 'Cursus Chirurgie', base: 'chirurgie' },
+  { value: 'chirurgie', label: 'Cursus Odontologie chirurgicale', base: 'chirurgie' },
   { value: 'parodontologie', label: 'Cursus Parodontologie complet', base: 'parodontologie' },
   { value: 'paro-m1', label: 'Cursus Parodontologie · Module 1/2', base: 'parodontologie', filter: 'Module 1/2' },
   { value: 'paro-m2', label: 'Cursus Parodontologie · Module 2/2', base: 'parodontologie', filter: 'Module 2/2' },
-  { value: 'chir-paro', label: 'Cursus Chirurgie + Cursus Parodontologie', base: null },
+  { value: 'chir-paro', label: 'Cursus Odontologie chirurgicale + Cursus Parodontologie', base: null },
   { value: 'assistante', label: 'Cursus Assistante en Parodontologie', base: 'assistante' },
 ];
 
@@ -291,7 +298,7 @@ export function buildFormData() {
       const list = [];
       for (const cs of cursus.chirurgie.sessions) {
         for (const ps of cursus.parodontologie.sessions) {
-          const name = `Chirurgie ${cs.name.replace('Promotion ', '')} + Parodontologie ${ps.name}`;
+          const name = `Odontologie chirurgicale ${cs.name.replace('Promotion ', '')} + Parodontologie ${ps.name}`;
           list.push({
             value: name, label: name,
             parts: [
@@ -301,7 +308,7 @@ export function buildFormData() {
           });
         }
       }
-      out[opt.value] = { title: 'Cursus Chirurgie + Cursus Parodontologie', format: 'Deux cursus complets', sessions: list };
+      out[opt.value] = { title: 'Cursus Odontologie chirurgicale + Cursus Parodontologie', format: 'Deux cursus complets', sessions: list };
       continue;
     }
     const c = cursus[opt.base];

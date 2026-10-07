@@ -98,7 +98,7 @@ const formPanel = `<div class="gc-6-7" data-form-panel>
   </div>
 
   <p class="form-sep">Votre dossier</p>
-  <p class="small muted">Après l'envoi de votre préinscription, complétez votre dossier en adressant par e-mail à <a class="link-u" href="mailto:contact@sapoclinique.com">contact@sapoclinique.com</a> : votre <strong style="color:var(--ink);font-weight:500">CV</strong>, une <strong style="color:var(--ink);font-weight:500">lettre de motivation</strong> et, pour le cursus Chirurgie, votre <strong style="color:var(--ink);font-weight:500">certificat de vaccination contre l'hépatite B</strong>. Seuls les dossiers complets sont traités.</p>
+  <p class="small muted">Après l'envoi de votre préinscription, complétez votre dossier en adressant par e-mail à <a class="link-u" href="mailto:contact@sapoclinique.com">contact@sapoclinique.com</a> : votre <strong style="color:var(--ink);font-weight:500">CV</strong>, une <strong style="color:var(--ink);font-weight:500">lettre de motivation</strong> et, pour le cursus Odontologie chirurgicale, votre <strong style="color:var(--ink);font-weight:500">certificat de vaccination contre l'hépatite B</strong>. Seuls les dossiers complets sont traités.</p>
 
   <div class="field">
     <label for="f-message">Message <span class="faint">(facultatif)</span></label>
@@ -119,7 +119,7 @@ const formPanel = `<div class="gc-6-7" data-form-panel>
 const confirmPanel = `<div class="gc-6-7 card card--form stack gap-6" id="inscription-confirm" hidden>
   <p class="eyebrow eyebrow--accent">Étape 01 terminée</p>
   <h2 class="h2-lg" style="font-size:clamp(26px,3vw,34px)">Merci. Votre demande est prête à partir.</h2>
-  <p class="muted" id="confirm-intro">Votre messagerie s'est ouverte avec votre demande de préinscription prérédigée — vérifiez le contenu puis envoyez l'e-mail. Pensez à joindre les pièces de votre dossier (CV, lettre de motivation, et certificat de vaccination hépatite B pour le cursus Chirurgie).</p>
+  <p class="muted" id="confirm-intro">Votre messagerie s'est ouverte avec votre demande de préinscription prérédigée — vérifiez le contenu puis envoyez l'e-mail. Pensez à joindre les pièces de votre dossier (CV, lettre de motivation, et certificat de vaccination hépatite B pour le cursus Odontologie chirurgicale).</p>
   <div id="confirm-recap" class="stack"></div>
   <p class="small faint">Après validation de votre dossier, vous recevrez le lien de règlement sécurisé de l'acompte ou, en cas de prise en charge, le devis et la convention. Vous préférez un virement ? Précisez-le simplement dans votre e-mail.</p>
   <button type="button" class="link-u small muted" id="confirm-again" style="align-self:flex-start;text-align:left">Modifier ma demande</button>

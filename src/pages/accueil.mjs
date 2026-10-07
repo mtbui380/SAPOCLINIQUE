@@ -1,5 +1,5 @@
 import { esc, img, arrow, inscriptionHref } from '../html.mjs';
-import { site, cursusVisibles, cursus, upcoming, upcomingYearsLabel, heroSession, stats, seo, orgJsonLd, courseJsonLd } from '../data.mjs';
+import { site, cursusVisibles, cursus, upcoming, upcomingYearsLabel, heroSession, stats, temoignages, seo, orgJsonLd, courseJsonLd } from '../data.mjs';
 
 const piliers = [
   { t: 'Comprendre', p: "Anatomie clinique, modèles 3D et imagerie. Repères, trajets nerveux et vasculaires : le socle commun à tous les cursus." },
@@ -85,7 +85,7 @@ function dissectionSection() {
     <div class="gc-1-4 stack gap-5" style="padding-bottom:48px;padding-right:24px">
       <h2 id="h-dissection" class="h2-xl">Une journée de dissection sur corps humain</h2>
       <p class="muted" style="line-height:1.65">Pratiquez sur des corps humains au sein de l'École de Chirurgie de l'AP-HP à Paris, dans le respect du cadre légal et déontologique en vigueur.<br>Réservée aux praticiens inscrits au cursus chirurgical intégral.</p>
-      <a class="link-u" href="/cursus/chirurgie/" style="align-self:flex-start">Cursus Chirurgie, module 2/2</a>
+      <a class="link-u" href="/cursus/chirurgie/" style="align-self:flex-start">Cursus Odontologie chirurgicale, module 2/2</a>
     </div>
     <div class="gc-5-end">
       ${img({ name: 'tp-sutures', alt: 'Travaux pratiques de sutures sur pièce anatomique, cursus Odontologie chirurgicale SAPO Clinique', widths: [800, 1600], cls: 'ph ar-32 ph--bleed-r', sizes: '(max-width: 720px) 100vw, 60vw' })}
@@ -136,6 +136,10 @@ function statsSection() {
       <span>${esc(x.label)}</span>
       <span class="smaller muted">${esc(x.source)}</span>
     </div>`).join('\n    ');
+  const quotes = temoignages.map(t => `<blockquote class="quote">
+      <p>« ${esc(t.texte)} »</p>
+      <footer>${esc(t.auteur)} · ${esc(t.cursus)}</footer>
+    </blockquote>`).join('\n    ');
   return `<section class="container section" aria-labelledby="h-avis">
   <div class="grid" style="row-gap:56px">
     <div class="gc-1-5 stack gap-5" style="padding-right:24px">
@@ -143,6 +147,9 @@ function statsSection() {
     </div>
     <div class="gc-7-6 stats">
     ${cards}
+    </div>
+    <div class="gc-full quotes">
+    ${quotes}
     </div>
     <figure class="gc-1-6">
       ${img({ name: 'tp-chirurgie-praticien', alt: "Praticien en travaux pratiques d'odontologie chirurgicale, cursus SAPO Clinique", cls: 'ph ar-45', sizes: '(max-width: 720px) 100vw, 45vw' })}
