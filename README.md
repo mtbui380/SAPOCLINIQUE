@@ -55,8 +55,8 @@ Pour passer à un service de formulaires (Formspree, etc.) : renseigner
 - [ ] **CGV** : document à rédiger et à lier.
 - [ ] **Tarifs** : affichés « Sur demande » — publier les prix quand ils seront arrêtés
       (`price` dans `src/data.mjs`).
-- [ ] **Équipe** : portraits et noms des autres formateurs + référent handicap
-      (`equipe` dans `src/data.mjs`).
+- [ ] **Équipe** : portrait de Mélanie Blois si souhaité (`equipe` dans `src/data.mjs`, carte aux
+      initiales en attendant) ; vérifier l'orthographe et les accents des formateurs occasionnels.
 - [ ] **Témoignages** : trois citations en ligne sur l'accueil (prénom + cursus, `temoignages`
       dans `src/data.mjs`) — conserver l'accord écrit de chaque auteur.
 - [ ] **Instagram** : URL réelle du compte (`site.instagram` dans `src/data.mjs`).
