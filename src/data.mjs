@@ -11,6 +11,13 @@ export const site = {
   email: 'contact@sapoclinique.com',
   instagram: 'https://www.instagram.com/',           // TODO : URL du compte Instagram
   descriptionCourte: 'Organisme de formation en odontologie chirurgicale et parodontologie, depuis 2002.',
+  /**
+   * Formulaire de contact. Vide → le formulaire ouvre la messagerie du visiteur
+   * (mailto). Renseigner l'URL Formspree du formulaire (https://formspree.io/f/xxxxxxxx)
+   * pour un envoi direct à l'adresse de contact : la page Contact, la CSP et les
+   * mentions légales s'adaptent au build. Voir README « Formulaires ».
+   */
+  contactEndpoint: '',
   qualiopi: {
     certificat: 'ICPF B05608', nda: '52490397949',
     // Dimensions intrinsèques des marques (docs/assets/img), pour les attributs width/height.

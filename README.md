@@ -38,15 +38,31 @@ node build.mjs
 
 ## Formulaires
 
-Les formulaires (préinscription, contact) fonctionnent **sans serveur** : ils ouvrent
-la messagerie du visiteur avec un e-mail prérédigé vers `contact@sapoclinique.com`.
-Aucune donnée n'est stockée sur le site (choix RGPD : les pièces du dossier,
-dont le certificat de vaccination — donnée de santé — transitent par e-mail,
-pas par le site).
+**Préinscription** : fonctionne sans serveur, le formulaire ouvre la messagerie du
+visiteur avec un e-mail prérédigé vers `contact@sapoclinique.com`. Aucune donnée n'est
+stockée sur le site (choix RGPD : les pièces du dossier, dont le certificat de
+vaccination — donnée de santé — transitent par e-mail, pas par le site).
 
-Pour passer à un service de formulaires (Formspree, etc.) : renseigner
-`FORM_ENDPOINT` dans `docs/assets/js/site.js` **et** ajouter l'origine du service
-à la directive `connect-src` de la CSP dans `src/layout.mjs`, puis reconstruire.
+**Contact** : même fonctionnement par défaut (mailto). Pour un envoi direct à
+`contact@sapoclinique.com` sans passer par la messagerie du visiteur, le formulaire est
+prêt pour [Formspree](https://formspree.io) :
+
+1. Créer un compte Formspree avec l'adresse `contact@sapoclinique.com` (c'est elle qui
+   recevra les messages), puis un formulaire « Contact » ; copier son URL
+   `https://formspree.io/f/xxxxxxxx`.
+2. Dans les réglages Formspree du formulaire : **désactiver reCAPTCHA** (incompatible
+   avec l'envoi en arrière-plan utilisé par le site), laisser le filtre anti-spam actif,
+   et restreindre les domaines autorisés à `www.sapoclinique.com` et
+   `mtbui380.github.io`.
+3. Renseigner `contactEndpoint` dans `src/data.mjs` avec cette URL, reconstruire
+   (`node build.mjs`), commiter. La page Contact, la CSP (`connect-src`) et les mentions
+   légales (sous-traitant Formspree) s'adaptent automatiquement.
+
+Protections anti-spam côté site : champ piège invisible (`_gotcha`, également reconnu
+par Formspree), délai minimal de 3 s entre l'affichage et l'envoi, bouton bloqué pendant
+l'envoi. Le plan gratuit Formspree accepte 50 messages par mois ; au-delà, passer au
+plan payant ou changer de service (le code n'est lié à Formspree que par l'URL et le
+nom du champ piège).
 
 ## Reste à fournir / brancher (TODO)
 

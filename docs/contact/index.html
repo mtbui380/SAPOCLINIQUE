@@ -63,6 +63,9 @@
 </div>
 <form id="contact-form" class="gc-6-7 card card--form stack" style="gap:18px" method="post" novalidate>
   <noscript><p class="small muted">Ce formulaire nécessite JavaScript. Sans JavaScript, écrivez-nous simplement à <a class="link-u" href="mailto:contact@sapoclinique.com">contact@sapoclinique.com</a>.</p></noscript>
+  <!-- Champ piège anti-spam : invisible et hors tabulation ; un robot qui le remplit
+       voit son envoi ignoré (côté site et côté Formspree, champ _gotcha). -->
+  <div class="hp" aria-hidden="true"><label for="c-site">Ne pas remplir</label><input type="text" id="c-site" name="_gotcha" tabindex="-1" autocomplete="off"></div>
 
   <div class="field-grid">
     <div class="field">
@@ -86,6 +89,7 @@
   <p class="small faint">Ce formulaire ouvre votre messagerie avec le message prérédigé — aucune donnée n'est stockée sur ce site.</p>
   <button class="btn-submit" type="submit">Envoyer</button>
   <p id="contact-sent" role="status" hidden class="small" style="color:var(--accent)">Votre messagerie s'est ouverte avec votre message. Si ce n'est pas le cas, écrivez-nous directement à contact@sapoclinique.com.</p>
+  <p id="contact-error" role="alert" hidden class="form-error">L'envoi a échoué. Réessayez dans un instant, ou écrivez-nous directement à <a class="link-u" href="mailto:contact@sapoclinique.com">contact@sapoclinique.com</a>.</p>
 </form>
 </div>
 </main>

@@ -657,6 +657,9 @@ select option { background: var(--panel); }
 }
 .social-btn:hover { border-color: var(--ink); opacity: 1; }
 
+/* Champ piège anti-spam (formulaire de contact) : hors écran, hors tabulation. */
+.hp { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
 /* --------------------------- Divers pages --------------------------------- */
 .chips { display: flex; gap: 8px; flex-wrap: wrap; }
 .page-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }

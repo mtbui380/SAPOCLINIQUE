@@ -107,9 +107,14 @@
   window.addEventListener('hashchange', openFromHash);
 
   /* ------------------------ Formulaire de contact ----------------------
-     Sans service tiers : compose un e-mail prérempli.                    */
+     Avec data-endpoint (Formspree, cf. site.contactEndpoint dans data.mjs) :
+     envoi direct en JSON. Sans : compose un e-mail prérempli (mailto).
+     Anti-spam côté site : champ piège `_gotcha`, délai minimal de 3 s
+     entre l'affichage et l'envoi, bouton bloqué pendant l'envoi.        */
   var contactForm = document.getElementById('contact-form');
   if (contactForm) {
+    var contactEndpoint = contactForm.getAttribute('data-endpoint') || '';
+    var contactOpenedAt = Date.now();
     // Présélection du sujet via /contact/?sujet=<clé> (ex. liens « S'inscrire »
     // de la conférence à la Réunion depuis le calendrier).
     var sujetKey = new URLSearchParams(location.search).get('sujet');
@@ -118,19 +123,53 @@
       var opt = sel && sel.querySelector('option[data-key="' + sujetKey + '"]');
       if (opt) sel.value = opt.value;
     }
+    var contactSent = document.getElementById('contact-sent');
+    var contactError = document.getElementById('contact-error');
+    var contactSubmit = contactForm.querySelector('[type="submit"]');
+    function contactDone() {
+      contactForm.reset();
+      if (contactError) contactError.hidden = true;
+      if (contactSent) { contactSent.hidden = false; contactSent.setAttribute('tabindex', '-1'); contactSent.focus(); }
+    }
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!contactForm.reportValidity()) return;
       var d = new FormData(contactForm);
       var sujet = 'Site SAPO Clinique — ' + (d.get('sujet') || 'Contact');
-      var corps = 'Nom : ' + (d.get('nom') || '') + '\n' +
-        'E-mail : ' + (d.get('email') || '') + '\n\n' +
-        (d.get('message') || '');
-      location.href = 'mailto:' + CONTACT_EMAIL +
-        '?subject=' + encodeURIComponent(sujet) +
-        '&body=' + encodeURIComponent(corps);
-      var ok = document.getElementById('contact-sent');
-      if (ok) ok.hidden = false;
+      if (!contactEndpoint) {
+        var corps = 'Nom : ' + (d.get('nom') || '') + '\n' +
+          'E-mail : ' + (d.get('email') || '') + '\n\n' +
+          (d.get('message') || '');
+        location.href = 'mailto:' + CONTACT_EMAIL +
+          '?subject=' + encodeURIComponent(sujet) +
+          '&body=' + encodeURIComponent(corps);
+        if (contactSent) contactSent.hidden = false;
+        return;
+      }
+      // Robot probable (champ piège rempli ou envoi quasi instantané) :
+      // on affiche la confirmation sans rien transmettre.
+      if (d.get('_gotcha') || Date.now() - contactOpenedAt < 3000) { contactDone(); return; }
+      if (contactSubmit) contactSubmit.disabled = true;
+      fetch(contactEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: sujet,
+          _replyto: d.get('email') || '',
+          nom: d.get('nom') || '',
+          email: d.get('email') || '',
+          sujet: d.get('sujet') || '',
+          message: d.get('message') || '',
+          page: location.href,
+        }),
+      }).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        contactDone();
+      }).catch(function () {
+        if (contactError) contactError.hidden = false;
+      }).then(function () {
+        if (contactSubmit) contactSubmit.disabled = false;
+      });
     });
   }
 
