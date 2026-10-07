@@ -17,7 +17,7 @@ export const site = {
    * pour un envoi direct à l'adresse de contact : la page Contact, la CSP et les
    * mentions légales s'adaptent au build. Voir README « Formulaires ».
    */
-  contactEndpoint: '',
+  contactEndpoint: 'https://formspree.io/f/xppqpqbz',
   qualiopi: {
     certificat: 'ICPF B05608', nda: '52490397949',
     // Dimensions intrinsèques des marques (docs/assets/img), pour les attributs width/height.

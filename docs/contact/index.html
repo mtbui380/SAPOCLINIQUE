@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self'">
 <title>Contact · SAPO Clinique</title>
 <meta name="description" content="Une question sur un cursus, un financement ou une adaptation d'accueil : contactez SAPO Clinique.">
 <link rel="canonical" href="https://www.sapoclinique.com/contact/">
@@ -61,7 +61,7 @@
     </div>
   </div>
 </div>
-<form id="contact-form" class="gc-6-7 card card--form stack" style="gap:18px" method="post" novalidate>
+<form id="contact-form" class="gc-6-7 card card--form stack" style="gap:18px" method="post" novalidate data-endpoint="https://formspree.io/f/xppqpqbz">
   <noscript><p class="small muted">Ce formulaire nécessite JavaScript. Sans JavaScript, écrivez-nous simplement à <a class="link-u" href="mailto:contact@sapoclinique.com">contact@sapoclinique.com</a>.</p></noscript>
   <!-- Champ piège anti-spam : invisible et hors tabulation ; un robot qui le remplit
        voit son envoi ignoré (côté site et côté Formspree, champ _gotcha). -->
@@ -86,9 +86,9 @@
     <textarea id="c-message" name="message" rows="5" required></textarea>
   </div>
 
-  <p class="small faint">Ce formulaire ouvre votre messagerie avec le message prérédigé — aucune donnée n'est stockée sur ce site.</p>
+  <p class="small faint">Votre message est transmis à contact@sapoclinique.com par notre prestataire d'envoi (Formspree). Il ne sert qu'à vous répondre — <a class="link-u" href="/SAPOCLINIQUE/mentions-legales/#donnees">politique de confidentialité</a>.</p>
   <button class="btn-submit" type="submit">Envoyer</button>
-  <p id="contact-sent" role="status" hidden class="small" style="color:var(--accent)">Votre messagerie s'est ouverte avec votre message. Si ce n'est pas le cas, écrivez-nous directement à contact@sapoclinique.com.</p>
+  <p id="contact-sent" role="status" hidden class="small" style="color:var(--accent)">Merci, votre message a bien été envoyé. Nous vous répondons dans les meilleurs délais.</p>
   <p id="contact-error" role="alert" hidden class="form-error">L'envoi a échoué. Réessayez dans un instant, ou écrivez-nous directement à <a class="link-u" href="mailto:contact@sapoclinique.com">contact@sapoclinique.com</a>.</p>
 </form>
 </div>
