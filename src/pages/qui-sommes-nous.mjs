@@ -29,16 +29,35 @@ function teamCard(m) {
     </div>`;
 }
 
+function railArrow(dir) {
+  const d = dir < 0 ? 'M10 3L5 8l5 5' : 'M6 3l5 5-5 5';
+  return `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="${d}"></path></svg>`;
+}
+
 function teamSection() {
   return `<section class="container section--md grid" aria-labelledby="h-equipe" style="row-gap:32px;align-items:start">
   <h2 id="h-equipe" class="gc-1-3 h2-lg">L'équipe pédagogique</h2>
   <div class="gc-4-9 team-grid">
     ${equipe.map(teamCard).join('\n    ')}
   </div>
-  <div class="gc-4-9 rule-top stack gap-3" style="padding-top:20px">
-    <h3 style="font-size:16px">Formateurs occasionnels</h3>
-    <p class="small muted" style="line-height:1.7">${esc(formateursOccasionnels.intro)}</p>
-    <p class="small" style="line-height:1.7;color:var(--ink-85)">${formateursOccasionnels.noms.map(esc).join(' · ')}</p>
+  <div class="gc-4-9 rule-top stack gap-4" style="padding-top:20px" data-rail-wrap>
+    <div class="rail-head">
+      <div class="stack gap-2">
+        <h3 style="font-size:16px">Formateurs occasionnels</h3>
+        <p class="small muted" style="line-height:1.7">${esc(formateursOccasionnels.intro)}</p>
+      </div>
+      <!-- Flèches affichées par site.js ; sans JS, la rangée défile au doigt ou à la molette. -->
+      <div class="rail-nav">
+        <button class="social-btn rail-btn" type="button" data-rail-prev aria-label="Formateurs précédents" hidden>${railArrow(-1)}</button>
+        <button class="social-btn rail-btn" type="button" data-rail-next aria-label="Formateurs suivants" hidden>${railArrow(1)}</button>
+      </div>
+    </div>
+    <ul class="rail" data-rail aria-label="Formateurs occasionnels" tabindex="0">
+      ${formateursOccasionnels.noms.map(n => `<li class="rail__card">
+        <span class="team-card__nom">${esc(n)}</span>
+        <span class="team-card__role">${formateursOccasionnels.role.split(' · ').map(esc).join('<br>')}</span>
+      </li>`).join('\n      ')}
+    </ul>
   </div>
 </section>`;
 }
