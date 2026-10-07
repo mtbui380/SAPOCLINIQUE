@@ -143,9 +143,15 @@
     var prev = wrap.querySelector('[data-rail-prev]');
     var next = wrap.querySelector('[data-rail-next]');
     if (!rail || !prev || !next) return;
+    // Pas de défilement : data-rail-step cartes (une de moins sur mobile),
+    // sinon une largeur de rangée.
     function page() {
       var gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
-      return rail.clientWidth + gap;
+      var n = Number(rail.dataset.railStep) || 0;
+      var card = rail.firstElementChild;
+      if (!n || !card) return rail.clientWidth + gap;
+      if (window.matchMedia('(max-width: 720px)').matches) n = Math.max(1, n - 1);
+      return n * (card.getBoundingClientRect().width + gap);
     }
     function update() {
       var max = rail.scrollWidth - rail.clientWidth - 1;
@@ -153,6 +159,7 @@
       prev.hidden = next.hidden = !overflow;
       prev.disabled = rail.scrollLeft <= 0;
       next.disabled = rail.scrollLeft >= max;
+      wrap.classList.toggle('rail-end', !overflow || next.disabled);
     }
     prev.addEventListener('click', function () { rail.scrollBy({ left: -page(), behavior: 'smooth' }); });
     next.addEventListener('click', function () { rail.scrollBy({ left: page(), behavior: 'smooth' }); });
