@@ -85,7 +85,7 @@ function dissectionSection() {
     <div class="gc-1-4 stack gap-5" style="padding-bottom:48px;padding-right:24px">
       <h2 id="h-dissection" class="h2-xl">Une journée de dissection sur corps humain</h2>
       <p class="muted" style="line-height:1.65">Pratiquez sur des corps humains au sein de l'École de Chirurgie de l'AP-HP à Paris, dans le respect du cadre légal et déontologique en vigueur.<br>Réservée aux praticiens inscrits au cursus chirurgical intégral.</p>
-      <a class="link-u" href="/cursus/chirurgie/" style="align-self:flex-start">Cursus Chirurgie, module 2/2</a>
+      <a class="link-u" href="/cursus/chirurgie/" style="align-self:flex-start">Cursus Odontologie chirurgicale, module 2/2</a>
     </div>
     <div class="gc-5-end">
       ${img({ name: 'tp-sutures', alt: 'Travaux pratiques de sutures sur pièce anatomique, cursus Odontologie chirurgicale SAPO Clinique', widths: [800, 1600], cls: 'ph ar-32 ph--bleed-r', sizes: '(max-width: 720px) 100vw, 60vw' })}
