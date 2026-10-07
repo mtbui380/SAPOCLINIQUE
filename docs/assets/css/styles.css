@@ -471,8 +471,9 @@ main.no-pad { padding-bottom: 0; }
 figcaption { font-size: 12px; color: var(--muted); padding-top: 10px; }
 
 /* Équipe */
-/* Équipe : carrousel horizontal, 3 cartes visibles (2 sur mobile), défilement
-   par page avec accroche ; flèches ajoutées par site.js (data-rail). */
+/* Équipe : carrousel horizontal, 4 cartes visibles (2 sur mobile) à la largeur
+   de l'ancienne grille (~215 px), défilement par page avec accroche ; flèches
+   ajoutées par site.js (data-rail). */
 .team-rail {
   display: flex;
   gap: 24px;
@@ -484,7 +485,7 @@ figcaption { font-size: 12px; color: var(--muted); padding-top: 10px; }
   scrollbar-width: none;
 }
 .team-rail::-webkit-scrollbar { display: none; }
-.team-rail .team-card { flex: 0 0 calc((100% - 48px) / 3); scroll-snap-align: start; }
+.team-rail .team-card { flex: 0 0 calc((100% - 72px) / 4); scroll-snap-align: start; }
 @media (max-width: 720px) {
   .team-rail { gap: 16px; }
   .team-rail .team-card { flex-basis: calc((100% - 16px) / 2); }
