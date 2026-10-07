@@ -88,7 +88,7 @@ function dissectionSection() {
       <a class="link-u" href="/cursus/chirurgie/" style="align-self:flex-start">Cursus Odontologie chirurgicale, module 2/2</a>
     </div>
     <div class="gc-5-end">
-      ${img({ name: 'tp-sutures', alt: 'Travaux pratiques de sutures sur pièce anatomique, cursus Odontologie chirurgicale SAPO Clinique', widths: [800, 1600], cls: 'ph ar-32 ph--bleed-r', sizes: '(max-width: 720px) 100vw, 60vw' })}
+      ${img({ name: 'dissection', alt: "Dissection sur corps humain à l'École de Chirurgie de l'AP-HP : structures anatomiques exposées sous écarteur, cursus Odontologie chirurgicale SAPO Clinique", widths: [800, 1600], cls: 'ph ar-32 ph--bleed-r', sizes: '(max-width: 720px) 100vw, 60vw' })}
     </div>
   </div>
 </section>`;
