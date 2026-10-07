@@ -471,9 +471,21 @@ main.no-pad { padding-bottom: 0; }
 figcaption { font-size: 12px; color: var(--muted); padding-top: 10px; }
 
 /* Équipe */
-/* Équipe : carrousel horizontal, 4 cartes visibles (2 sur mobile) à la largeur
-   de l'ancienne grille (~215 px), défilement par page avec accroche ; flèches
-   ajoutées par site.js (data-rail). */
+/* Équipe : carrousel horizontal. Cartes à la largeur de l'ancienne grille
+   (~215 px) : trois pleines par page, la quatrième dépasse et se fond dans le
+   fond sur ses deux tiers droits (dégradé posé sur le conteneur fixe, masqué
+   en fin de liste). Flèches ajoutées par site.js (data-rail). */
+.team-rail-wrap { position: relative; }
+.team-rail-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: calc((100% - 72px) / 4 * 2 / 3);
+  background: linear-gradient(to right, rgba(7, 9, 12, 0), var(--bg) 85%);
+  pointer-events: none;
+  transition: opacity .3s;
+}
+.rail-end .team-rail-wrap::after { opacity: 0; }
 .team-rail {
   display: flex;
   gap: 24px;
@@ -488,7 +500,8 @@ figcaption { font-size: 12px; color: var(--muted); padding-top: 10px; }
 .team-rail .team-card { flex: 0 0 calc((100% - 72px) / 4); scroll-snap-align: start; }
 @media (max-width: 720px) {
   .team-rail { gap: 16px; }
-  .team-rail .team-card { flex-basis: calc((100% - 16px) / 2); }
+  .team-rail .team-card { flex-basis: calc((100% - 32px) / 2.5); }
+  .team-rail-wrap::after { width: calc((100% - 32px) / 2.5 * .5); }
 }
 .rail-nav { display: flex; gap: 8px; }
 .rail-btn[disabled] { opacity: .35; cursor: default; }

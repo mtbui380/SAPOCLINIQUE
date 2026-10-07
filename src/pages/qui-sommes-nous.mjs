@@ -45,9 +45,11 @@ function teamSection() {
       <button class="social-btn rail-btn" type="button" data-rail-next aria-label="Membres suivants" hidden>${railArrow(1)}</button>
     </div>
   </div>
-  <ul class="gc-4-9 team-rail" data-rail aria-label="Membres de l'équipe" tabindex="0">
-    ${membres.map(teamCard).join('\n    ')}
-  </ul>
+  <div class="gc-4-9 team-rail-wrap">
+    <ul class="team-rail" data-rail data-rail-step="3" aria-label="Membres de l'équipe" tabindex="0">
+      ${membres.map(teamCard).join('\n      ')}
+    </ul>
+  </div>
 </section>`;
 }
 
