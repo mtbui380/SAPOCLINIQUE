@@ -17,7 +17,7 @@ export default {
   path: '/calendrier/',            // URL, avec / final ; fichier écrit : docs/calendrier/index.html
   title: seo.calendrier.title,     // <title> — depuis data.mjs
   description: seo.calendrier.description,
-  navKey: 'calendrier',            // souligne l'onglet actif : cursus|calendrier|qui|mediatheque|ressources|contact ou null
+  navKey: 'calendrier',            // souligne l'onglet actif : cursus|calendrier|qui|ressources|contact ou null
   noindex: false,                  // true → meta robots noindex + exclu du sitemap
   jsonLd: [orgJsonLd()],           // tableau @graph, ou omis
   content: `<section>…</section>`, // contenu du <main> uniquement

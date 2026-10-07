@@ -34,7 +34,9 @@ export default {
   path: '/mediatheque/',
   title: seo.mediatheque.title,
   description: seo.mediatheque.description,
-  navKey: 'mediatheque',
+  navKey: null,
+  // Page retirée de la navigation (menu, pied de page) : reste accessible par URL, hors index et sitemap.
+  noindex: true,
   jsonLd: [orgJsonLd()],
   content,
 };

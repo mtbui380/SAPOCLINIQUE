@@ -17,7 +17,6 @@ const NAV = [
   { href: '/cursus/', label: 'Cursus', key: 'cursus' },
   { href: '/calendrier/', label: 'Calendrier', key: 'calendrier' },
   { href: '/qui-sommes-nous/', label: 'Qui sommes-nous', key: 'qui' },
-  { href: '/mediatheque/', label: 'Médiathèque', key: 'mediatheque' },
   { href: '/ressources/', label: 'Ressources', key: 'ressources' },
 ];
 
@@ -55,7 +54,6 @@ function footer() {
     <div class="gc-8-2"><span class="site-footer__head">Site</span>
       <a href="/calendrier/">Calendrier</a>
       <a href="/qui-sommes-nous/">Qui sommes-nous</a>
-      <a href="/mediatheque/">Médiathèque</a>
       <a href="/ressources/">Ressources</a>
       <a href="/contact/">Contact</a>
     </div>
