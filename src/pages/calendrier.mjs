@@ -49,7 +49,7 @@ const content = `<section class="container section--top stack" style="gap:40px" 
       ${pastSessions.map(pastRow).join('\n      ')}
     </div>
   </details>
-  <p class="notice">Les dates marquées « à confirmer » seront précisées au plus tard trois mois avant la session. Les inscriptions restent ouvertes jusqu'à 15 jours avant le premier module, dans la limite des places disponibles.</p>
+  <p class="notice">Les inscriptions restent ouvertes jusqu'à 15 jours avant le premier module, dans la limite des places disponibles.</p>
 </section>`;
 
 export default {

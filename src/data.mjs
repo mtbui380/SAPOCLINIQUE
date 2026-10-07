@@ -37,7 +37,7 @@ export const cursus = {
     place: "Faculté de chirurgie dentaire, Université Paris Cité (Descartes), Paris · journée de dissection à l'École de Chirurgie de l'AP-HP",
     intro: "Quatre thèmes en travaux pratiques : l'analgésie, l'odontologie chirurgicale (incisions, sutures), la gestion des hémorragies et l'imagerie. Une approche exclusivement clinique de l'anatomie, dans la continuité du Pr Jean-François Gaudy, avec une journée de dissection sur corps humain à l'École de Chirurgie de l'AP-HP.",
     sessionsNote: 'Une promotion par an, en deux modules de trois jours qui se suivent. Le module 2/2 comprend la journée de dissection.',
-    sessions: [{ name: 'Promotion 2027', parts: [{ label: 'Module 1/2', dates: '2–4 juin 2027' }, { label: 'Module 2/2', dates: 'septembre 2027 (à confirmer)' }] }],
+    sessions: [{ name: 'Promotion 2027', parts: [{ label: 'Module 1/2', dates: '2–4 juin 2027' }, { label: 'Module 2/2', dates: '22–24 septembre 2027' }] }],
     goals: [
       'Choisir la molécule et la technique analgésique adaptées à chaque situation clinique',
       "Lire un CBCT et repérer les éléments nobles avant d'opérer",
@@ -221,7 +221,7 @@ export const sessions = [
   { month: 'Janv 27', key: 'parodontologie', formKey: 'paro-m1', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 1/2', promo: 'Promotion 2027-I · non chirurgical · 3 jours', dates: '13–15 janvier' },
   { month: 'Janv 27', key: 'assistante', formKey: 'assistante', sess: 'Session janvier 2027', type: 'assist', title: 'Cursus Assistante en Parodontologie', promo: 'Promotion 2027 · 2 jours', dates: '13–14 janvier' },
   { month: 'Mars 27', key: 'parodontologie', formKey: 'paro-m2', sess: 'Session 2027 · I', type: 'paro', title: 'Cursus Parodontologie · Module 2/2', promo: 'Promotion 2027-I · chirurgical · 3 jours', dates: '10–12 mars' },
-  { month: 'Juin 27', key: 'chirurgie', formKey: 'chirurgie', sess: 'Promotion 2027', type: 'chir', title: 'Cursus Odontologie chirurgicale', promo: 'Promotion 2027 · 2 × 3 jours', dates: '2–4 juin · sept (à confirmer)' },
+  { month: 'Juin 27', key: 'chirurgie', formKey: 'chirurgie', sess: 'Promotion 2027', type: 'chir', title: 'Cursus Odontologie chirurgicale', promo: 'Promotion 2027 · 2 × 3 jours', dates: '2–4 juin · 22–24 sept' },
   { month: 'Oct 27', key: 'assistante', formKey: 'assistante', sess: 'Session octobre 2027', type: 'assist', title: 'Cursus Assistante en Parodontologie', promo: 'Promotion 2027 · 2 jours', dates: '6–7 octobre' },
   { month: 'Oct 27', key: 'parodontologie', formKey: 'paro-m1', sess: 'Session 2027 · II', type: 'paro', title: 'Cursus Parodontologie · Module 1/2', promo: 'Promotion 2027-II · non chirurgical · 3 jours', dates: '13–15 octobre' },
   { month: 'Déc 27', key: 'parodontologie', formKey: 'paro-m2', sess: 'Session 2027 · II', type: 'paro', title: 'Cursus Parodontologie · Module 2/2', promo: 'Promotion 2027-II · chirurgical · 3 jours', dates: '8–10 décembre' },
