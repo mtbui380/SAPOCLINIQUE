@@ -57,7 +57,8 @@ Pour passer à un service de formulaires (Formspree, etc.) : renseigner
       (`price` dans `src/data.mjs`).
 - [ ] **Équipe** : portraits et noms des autres formateurs + référent handicap
       (`equipe` dans `src/data.mjs`).
-- [ ] **Témoignages** : citations d'anciens participants (droit à l'image / accord écrit).
+- [ ] **Témoignages** : trois citations en ligne sur l'accueil (prénom + cursus, `temoignages`
+      dans `src/data.mjs`) — conserver l'accord écrit de chaque auteur.
 - [ ] **Instagram** : URL réelle du compte (`site.instagram` dans `src/data.mjs`).
 - [ ] **Certificat Qualiopi** : publier le PDF et le lier depuis l'accueil.
 - [ ] **Espace anciens** : lien réel de la communauté (`src/pages/ressources.mjs`).

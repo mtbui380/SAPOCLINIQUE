@@ -481,6 +481,10 @@ figcaption { font-size: 12px; color: var(--muted); padding-top: 10px; }
 .quote { padding: 20px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
 .quote p { font-size: 17px; line-height: 1.55; }
 .quote footer { font-size: 13px; color: var(--muted); }
+/* Témoignages (accueil) : trois colonnes, une seule sur mobile. */
+.quotes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 24px; }
+.quotes .quote p { font-size: 16px; color: var(--ink-85); }
+@media (max-width: 720px) { .quotes { grid-template-columns: 1fr; } }
 
 /* ------------------------------ Cartes ------------------------------------ */
 .card {

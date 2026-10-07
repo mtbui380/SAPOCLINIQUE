@@ -1,5 +1,5 @@
 import { esc, img, arrow, inscriptionHref } from '../html.mjs';
-import { site, cursusVisibles, cursus, upcoming, upcomingYearsLabel, heroSession, stats, seo, orgJsonLd, courseJsonLd } from '../data.mjs';
+import { site, cursusVisibles, cursus, upcoming, upcomingYearsLabel, heroSession, stats, temoignages, seo, orgJsonLd, courseJsonLd } from '../data.mjs';
 
 const piliers = [
   { t: 'Comprendre', p: "Anatomie clinique, modèles 3D et imagerie. Repères, trajets nerveux et vasculaires : le socle commun à tous les cursus." },
@@ -136,6 +136,10 @@ function statsSection() {
       <span>${esc(x.label)}</span>
       <span class="smaller muted">${esc(x.source)}</span>
     </div>`).join('\n    ');
+  const quotes = temoignages.map(t => `<blockquote class="quote">
+      <p>« ${esc(t.texte)} »</p>
+      <footer>${esc(t.auteur)} · ${esc(t.cursus)}</footer>
+    </blockquote>`).join('\n    ');
   return `<section class="container section" aria-labelledby="h-avis">
   <div class="grid" style="row-gap:56px">
     <div class="gc-1-5 stack gap-5" style="padding-right:24px">
@@ -143,6 +147,9 @@ function statsSection() {
     </div>
     <div class="gc-7-6 stats">
     ${cards}
+    </div>
+    <div class="gc-full quotes">
+    ${quotes}
     </div>
     <figure class="gc-1-6">
       ${img({ name: 'tp-chirurgie-praticien', alt: "Praticien en travaux pratiques d'odontologie chirurgicale, cursus SAPO Clinique", cls: 'ph ar-45', sizes: '(max-width: 720px) 100vw, 45vw' })}

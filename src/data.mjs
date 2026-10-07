@@ -263,6 +263,13 @@ export const stats = [
   { value: '100', unit: '%', label: 'Ont fait évoluer leur pratique et recommandent la formation', source: 'Sessions 2026' },
 ];
 
+/** Témoignages d'anciens participants (accueil, sous les statistiques). Prénom seul. */
+export const temoignages = [
+  { auteur: 'Maria', cursus: 'Cursus Parodontologie', texte: "Une approche qui permet de mettre en place des façons simples de prendre en charge les patients paro au cabinet. Je pensais la chirurgie trop compliquée à intégrer à ma pratique. Avec Matthias, on apprend des gestes simples, et on voit que c'est faisable. Ça m'a vraiment donné envie de m'y mettre. Je recommande." },
+  { auteur: 'Marine', cursus: 'Cursus Chirurgie', texte: "Je le recommande à tous ceux qui veulent se lancer dans la chirurgie : cela me paraît indispensable pour vraiment bien s'y connaître avant de commencer, que ce soit pour des implants, des greffes gingivales ou n'importe quelle chirurgie en bouche. Je recommande vivement, merci à toute l'équipe." },
+  { auteur: 'Hubert', cursus: 'Cursus Chirurgie', texte: "Le cursus d'odontologie chirurgicale m'a beaucoup apporté et rassuré. Revoir toute l'anatomie, par exemple, a été très important. Dans mes actes de chirurgie, je me sens beaucoup plus à l'aise maintenant." },
+];
+
 export const equipe = [
   { nom: 'Dr Philippe Blois', role: 'Co-directeur · Odontologie chirurgicale', img: 'portrait-blois', pos: '50% 15%' },
   { nom: 'Dr Matthias Rzeznik', role: 'Co-directeur · Parodontologie', img: 'portrait-rzeznik', pos: '50% 20%' },
